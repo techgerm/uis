@@ -1,5 +1,5 @@
-import { Button } from "antd";
-import React, { Component } from "react";
+import { Button } from 'antd';
+import React, { Component } from 'react';
 
 interface IContactProps {
     temp: string;
@@ -17,7 +17,7 @@ export default class Contact extends Component<IContactProps, IContactState> {
 
     public render() {
         return (
-            <Button type="primary"/>
+            <Button type="primary">Contact</Button>
         );
     }
 }
