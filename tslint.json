@@ -9,7 +9,9 @@
         "quotemark": false,
         "no-console": false,
         "ordered-imports": false,
-        "jsx-boolean-value": false
+        "jsx-boolean-value": false,
+        "interface-name": false,
+        "indent": false // Covered by Prettier
     },
     "rulesDirectory": [],
     "linterOptions": {

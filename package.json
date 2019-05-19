@@ -14,10 +14,16 @@
     "typescript": "3.4.5"
   },
   "scripts": {
+    "format": "prettier --write \"src/**/*.tsx\"",
+    "lint": "tslint -p tsconfig.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "npm run build",
+    "preversion": "CI=true npm test && npm run lint",
+    "version": "npm run format && git add --all",
+    "postversion": "git push && git push --tags && firebase deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1"
   }
 }
