@@ -1,46 +1,57 @@
 {
-  "name": "uis",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://unitedinternationalservices.com",
-  "dependencies": {
-    "@types/jest": "24.0.13",
-    "@types/node": "12.0.2",
-    "@types/react": "16.8.17",
-    "@types/react-dom": "16.8.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "typescript": "3.4.5"
-  },
-  "scripts": {
-    "format": "prettier --write \"src/**/*.tsx\"",
-    "lint": "tslint -p tsconfig.json",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "npm run build",
-    "preversion": "CI=true npm test && npm run lint",
-    "version": "npm run format && git add --all",
-    "postversion": "git push && git push --tags && firebase deploy"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "prettier": "^1.17.1"
-  }
+	"name": "uis",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "https://unitedinternationalservices.com",
+	"scripts": {
+		"build": "node-sass src/ -o src/ && react-scripts build",
+		"start": "react-scripts start",
+		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
+		"lint": "tslint -p tsconfig.json",
+		"test": "react-scripts test",
+		"prepare": "npm run build",
+		"preversion": "CI=true npm test && npm run lint",
+		"version": "npm run format && git add --all",
+		"postversion": "git push && git push --tags && firebase deploy",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"dependencies": {
+		"@types/jest": "24.0.13",
+		"@types/node": "12.0.2",
+		"@types/node-sass": "^4.11.0",
+		"@types/react": "16.8.17",
+		"@types/react-dom": "16.8.4",
+		"@types/react-owl-carousel": "^2.2.1",
+		"@types/react-router-dom": "^4.3.3",
+		"@types/uikit": "^2.27.7",
+		"lax.js": "^1.2.3",
+		"node-sass": "^4.12.0",
+		"react": "^16.8.6",
+		"react-anchor-link-smooth-scroll": "^1.0.12",
+		"react-dom": "^16.8.6",
+		"react-modal-video": "^1.2.2",
+		"react-owl-carousel3": "^2.2.5",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "3.0.1",
+		"typescript": "3.4.5",
+		"uikit": "^3.1.5"
+	},
+	"devDependencies": {
+		"prettier": "^1.17.1"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
