@@ -1,12 +1,12 @@
-import "../../assets/css/uikit.min.css";
-import "../../assets/css/style.scss";
-import "../../assets/css/responsive.scss";
-import "../../assets/css/flaticon.css";
-import "../../assets/css/animate.min.css";
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
+import "../assets/css/uikit.min.css";
+import "../assets/css/style.scss";
+import "../assets/css/responsive.scss";
+import "../assets/css/flaticon.css";
+import "../assets/css/animate.min.css";
 
 class Navigation extends React.Component {
 	render() {
