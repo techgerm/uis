@@ -1,44 +1,58 @@
 {
-  "name": "uis",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://unitedinternationalservices.com",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "@types/jest": "24.0.9",
-    "@types/node": "11.10.4",
-    "@types/react": "16.8.6",
-    "@types/react-burger-menu": "^2.2.3",
-    "@types/react-dom": "16.8.2",
-    "@types/react-router-dom": "^4.3.1",
-    "antd": "^3.15.2",
-    "babel-plugin-import": "^1.11.0",
-    "customize-cra": "^0.2.12",
-    "react": "^16.8.3",
-    "react-app-rewired": "^2.1.1",
-    "react-burger-menu": "^2.6.8",
-    "react-dom": "^16.8.3",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.5",
-    "typescript": "3.3.3333"
-  },
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "firebase deploy"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "uis",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "https://unitedinternationalservices.com",
+	"scripts": {
+		"build": "node-sass src/ -o src/ && react-scripts build",
+		"start": "react-scripts start",
+		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
+		"lint": "tslint -p tsconfig.json",
+		"test": "react-scripts test",
+		"prepare": "npm run build",
+		"preversion": "CI=true npm test && npm run lint",
+		"version": "npm run format && git add --all",
+		"postversion": "git push && git push --tags && firebase deploy",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"dependencies": {
+		"@types/jest": "24.0.13",
+		"@types/node": "12.0.2",
+		"@types/node-sass": "^4.11.0",
+		"@types/react": "16.8.17",
+		"@types/react-dom": "16.8.4",
+		"@types/react-owl-carousel": "^2.2.1",
+		"@types/react-router-dom": "^4.3.3",
+		"@types/uikit": "^2.27.7",
+		"lax.js": "^1.2.3",
+		"node-sass": "^4.12.0",
+		"react": "^16.8.6",
+		"react-anchor-link-smooth-scroll": "^1.0.12",
+		"react-dom": "^16.8.6",
+		"react-modal-video": "^1.2.2",
+		"react-owl-carousel3": "^2.2.5",
+		"react-router-dom": "^5.0.0",
+		"react-scripts": "3.0.1",
+		"typescript": "3.4.5",
+		"uikit": "^3.1.5"
+	},
+	"devDependencies": {
+		"prettier": "^1.17.1",
+		"tslint-config-prettier": "^1.18.0"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }

@@ -1,0 +1,452 @@
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px; }
+  p {
+    font-size: 14px; }
+  .section-title {
+    margin-bottom: 40px !important; }
+    .section-title span {
+      font-size: 13px;
+      text-transform: capitalize; }
+    .section-title h2 {
+      font-size: 23px;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .section-title .uk-button {
+      display: none; }
+  .header-area {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .header-area.uk-sticky-fixed {
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    .header-area #navbar-toggle {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+  .navbar {
+    display: none; }
+  .main-banner {
+    height: 100%;
+    background-position: left bottom;
+    padding-top: 145px;
+    padding-bottom: 600px; }
+  .main-banner-content {
+    max-width: unset; }
+    .main-banner-content h1 {
+      font-size: 35px;
+      line-height: 38px;
+      padding: 8px 0;
+      margin-bottom: 35px; }
+      .main-banner-content h1::before {
+        width: 15px; }
+    .main-banner-content p {
+      display: none; }
+    .main-banner-content .video-btn {
+      margin-left: 8px;
+      font-size: 13px; }
+      .main-banner-content .video-btn .uk-icon {
+        width: 40px;
+        margin-right: 3px;
+        height: 40px;
+        line-height: 40px; }
+    .main-banner-content .uk-button {
+      font-size: 14px;
+      padding: 12px 27px; }
+  .features-area {
+    margin-top: -520px;
+    background-color: transparent; }
+    .features-area.uk-dark {
+      background-color: transparent;
+      position: relative; }
+      .features-area.uk-dark::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #000000;
+        height: 45%;
+        z-index: -1; }
+  .single-features-box {
+    margin-top: 20px;
+    padding: 25px 20px; }
+    .single-features-box .icon i::before {
+      font-size: 35px; }
+    .single-features-box h3 {
+      font-size: 18px; }
+  .about-img {
+    position: relative;
+    top: 0;
+    margin-top: 35px; }
+    .about-img .about-img2, .about-img .shape-img {
+      display: none; }
+    .about-img img {
+      width: 100%; }
+    .about-img .about-img1 {
+      width: 100%; }
+    .about-img .uk-button {
+      right: 0;
+      bottom: 1px; }
+  .about-content .about-text h3 {
+    font-size: 17px; }
+  .services-area {
+    padding-bottom: 20px; }
+    .services-area .item {
+      margin-bottom: 20px; }
+  .single-services {
+    padding: 30px 30px 30px 88px;
+    border-radius: 65px 0 0 65px; }
+    .single-services .icon {
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      margin-top: -35px;
+      left: 5px; }
+      .single-services .icon i::before {
+        font-size: 28px; }
+    .single-services h3 {
+      font-size: 15px; }
+    .single-services .link-btn {
+      margin-top: -10px; }
+      .single-services .link-btn::before {
+        font-size: 15px; }
+  .project-slides {
+    left: 0; }
+    .project-slides.owl-theme .owl-dots {
+      margin-top: 25px !important; }
+  .single-project .project-content {
+    padding: 25px 15px; }
+    .single-project .project-content h3 {
+      font-size: 18px; }
+    .single-project .project-content ul li {
+      margin: 0 7px; }
+      .single-project .project-content ul li a {
+        font-size: 13px; }
+  .feedback-img .shape-img {
+    display: none; }
+  .feedback-img .video-btn {
+    right: 10px;
+    bottom: 10px; }
+  .feedback-inner {
+    margin-top: 30px; }
+  .partner-area {
+    padding-top: 40px !important; }
+  .team-slides.owl-theme .owl-dots {
+    margin-top: 25px !important; }
+  .single-team .team-content h3 {
+    font-size: 18px; }
+  .single-team:hover .team-social, .single-team:focus .team-social {
+    top: 0; }
+  .single-team:hover img, .single-team:focus img {
+    top: 60px; }
+  .subscribe-area {
+    text-align: center; }
+    .subscribe-area h3 {
+      font-size: 18px;
+      margin: 0 0 20px !important; }
+    .subscribe-area form .uk-button {
+      position: relative;
+      height: 50px;
+      margin-top: 20px; }
+  .single-blog-post .blog-post-content {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -30px;
+    padding: 20px 15px; }
+    .single-blog-post .blog-post-content h3 {
+      font-size: 18px; }
+  .single-blog-post .blog-post-image a img {
+    width: 100%; }
+  .blog-slides.owl-theme .owl-dots {
+    margin-top: 0 !important; }
+  .map-img {
+    margin-bottom: 0 !important;
+    margin-top: 75px; }
+    .map-img .location a .location-info {
+      left: -58px;
+      width: 130px;
+      padding: 15px 10px; }
+      .map-img .location a .location-info h5 {
+        font-size: 14px; }
+      .map-img .location a .location-info span {
+        font-size: 13px; }
+  .footer-area {
+    padding-top: 70px; }
+    .footer-area .footer-shape1, .footer-area .footer-shape2 {
+      display: none; }
+  .single-footer-widget {
+    margin-bottom: 30px !important; }
+    .single-footer-widget .logo {
+      margin-bottom: 20px; }
+    .single-footer-widget h3 {
+      font-size: 18px; }
+  .copyright-area {
+    margin-top: 10px;
+    text-align: center; }
+    .copyright-area ul {
+      text-align: center;
+      margin-top: 10px; }
+    .copyright-area .back-to-top {
+      top: -22px; }
+      .copyright-area .back-to-top .uk-totop {
+        width: 30px;
+        line-height: 30px;
+        height: 30px; }
+  .page-title-area {
+    padding-top: 120px;
+    padding-bottom: 60px; }
+    .page-title-area h1 {
+      font-size: 22px; }
+    .page-title-area ul {
+      margin: 13px 0 0; }
+  .blog-details .uk-flex {
+    display: block; }
+  .blog-details .uk-width-1-5 {
+    width: 100%; }
+  .blog-details .inner .article-img .date {
+    width: 80px;
+    height: 60px;
+    font-size: 15px;
+    padding-top: 13px;
+    line-height: 23px; }
+  .blog-details .inner .article-content ul.category li {
+    margin-bottom: 2px; }
+  .blog-details .inner .article-content h3 {
+    font-size: 18px;
+    line-height: 28px; }
+  .blog-details .inner .article-content .blockquote {
+    padding: 20px;
+    border-width: 3px; }
+    .blog-details .inner .article-content .blockquote p {
+      font-size: 15px; }
+  .blog-details .inner .post-controls-buttons {
+    overflow: hidden; }
+    .blog-details .inner .post-controls-buttons .item {
+      float: left;
+      width: 50%; }
+      .blog-details .inner .post-controls-buttons .item .uk-button {
+        font-size: 14px;
+        padding: 10px 25px; }
+  .blog-details .inner .comments-area .comments-title, .blog-details .inner .comments-area .comment-reply-title {
+    font-size: 17px; }
+  .blog-details .inner .comments-area ol li .comment-body .reply, .blog-details .inner .comments-area ul li .comment-body .reply {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 15px; }
+  .blog-details .inner .comments-area .comment-respond .comment-form-comment input, .blog-details .inner .comments-area .comment-respond .comment-form-comment textarea, .blog-details .inner .comments-area .comment-respond .comment-form-author input, .blog-details .inner .comments-area .comment-respond .comment-form-author textarea, .blog-details .inner .comments-area .comment-respond .comment-form-email input, .blog-details .inner .comments-area .comment-respond .comment-form-email textarea, .blog-details .inner .comments-area .comment-respond .comment-form-url input, .blog-details .inner .comments-area .comment-respond .comment-form-url textarea {
+    width: 90%; }
+  .blog-details .uk-sidebar {
+    margin-top: 40px; }
+  .uk-sidebar .widget .widget-title {
+    font-size: 18px; }
+  .uk-sidebar .widget.widget_recent_entries ul li h5 {
+    font-size: 14px; }
+  .services-details .uk-flex {
+    display: block; }
+  .services-details .uk-width-1-5 {
+    width: 100%; }
+  .services-details .uk-sidebar {
+    margin-top: 40px; }
+  .services-details-desc h3 {
+    font-size: 18px; }
+  .services-details-desc .services-features-list li {
+    float: unset;
+    width: 100%; }
+  .services-details-desc blockquote, .services-details-desc .blockquote {
+    padding: 20px 15px; }
+    .services-details-desc blockquote p, .services-details-desc .blockquote p {
+      font-size: 14px; }
+  .services-details-desc .our-work-benefits .accordion .accordion-title {
+    font-size: 14px; }
+  .pagination-area {
+    margin-top: 10px; }
+  .project-details .uk-flex {
+    display: block; }
+  .project-details .uk-width-1-5 {
+    width: 100%; }
+  .project-details-info {
+    padding: 20px; }
+    .project-details-info ul li {
+      font-size: 14px; }
+  .project-details-desc h3 {
+    font-size: 18px; }
+  .project-details-desc blockquote, .project-details-desc .blockquote {
+    padding: 20px 15px; }
+    .project-details-desc blockquote p, .project-details-desc .blockquote p {
+      font-size: 14px; }
+  .project-next-and-prev {
+    overflow: hidden;
+    padding: 0;
+    box-shadow: unset; }
+    .project-next-and-prev .item {
+      float: left;
+      width: 50%; }
+      .project-next-and-prev .item .uk-button {
+        font-size: 14px;
+        padding: 10px 20px; }
+  .Collapsible__trigger:after {
+    line-height: 65px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 14px; }
+  p {
+    font-size: 14px; }
+  .section-title h2 {
+    font-size: 30px; }
+  .header-area {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .header-area.uk-sticky-fixed {
+      padding-top: 25px;
+      padding-bottom: 25px; }
+    .header-area #navbar-toggle {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+  .navbar {
+    display: none; }
+  .main-banner {
+    height: 100%;
+    background-position: right bottom;
+    padding-top: 200px;
+    padding-bottom: 540px; }
+  .main-banner-content h1 {
+    font-size: 45px;
+    line-height: 45px;
+    padding: 6px 0; }
+    .main-banner-content h1::before {
+      width: 17px; }
+  .main-banner-content p {
+    margin-top: 25px;
+    margin-bottom: 25px; }
+  .features-area {
+    background: transparent;
+    margin-top: -400px; }
+    .features-area.uk-dark {
+      background-color: transparent;
+      position: relative; }
+      .features-area.uk-dark::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #000000;
+        height: 65%;
+        z-index: -1; }
+  .single-features-box {
+    margin-top: 20px; }
+    .single-features-box h3 {
+      font-size: 20px; }
+  .about-content .about-text h3 {
+    font-size: 18px; }
+  .about-img {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    margin-top: 30px; }
+    .about-img .about-img2 {
+      display: none; }
+    .about-img .about-img1 {
+      width: 100%; }
+    .about-img .uk-button {
+      bottom: 0; }
+  .services-area {
+    padding-bottom: 10px; }
+  .single-services h3 {
+    font-size: 16px; }
+  .project-slides {
+    left: 0;
+    position: relative; }
+  .single-project .project-content h3 {
+    font-size: 20px; }
+  .feedback-img .video-btn {
+    right: 0; }
+  .feedback-inner {
+    margin-top: 35px; }
+  .partner-area {
+    padding-top: 40px !important; }
+  .subscribe-area {
+    text-align: center; }
+    .subscribe-area h3 {
+      font-size: 20px;
+      margin: 0 0 20px !important; }
+    .subscribe-area form .uk-button {
+      position: relative;
+      height: 50px;
+      margin-top: 20px; }
+  .single-blog-post .blog-post-content {
+    margin-right: 10px;
+    margin-left: 10px; }
+    .single-blog-post .blog-post-content h3 {
+      font-size: 20px; }
+  .single-footer-widget {
+    margin-bottom: 30px !important; }
+    .single-footer-widget h3 {
+      font-size: 20px; }
+  .copyright-area {
+    margin-top: 40px; }
+  .page-title-area {
+    padding-top: 135px;
+    padding-bottom: 70px; }
+  .pagination-area {
+    margin-top: 20px; }
+  .blog-details .uk-flex {
+    display: block; }
+  .blog-details .uk-width-1-5 {
+    width: 100%; }
+  .blog-details .inner .article-content h3 {
+    font-size: 20px; }
+  .blog-details .inner .comments-area .comments-title, .blog-details .inner .comments-area .comment-reply-title {
+    font-size: 20px; }
+  .blog-details .inner .comments-area .comment-respond .comment-form-comment input, .blog-details .inner .comments-area .comment-respond .comment-form-comment textarea, .blog-details .inner .comments-area .comment-respond .comment-form-author input, .blog-details .inner .comments-area .comment-respond .comment-form-author textarea, .blog-details .inner .comments-area .comment-respond .comment-form-email input, .blog-details .inner .comments-area .comment-respond .comment-form-email textarea, .blog-details .inner .comments-area .comment-respond .comment-form-url input, .blog-details .inner .comments-area .comment-respond .comment-form-url textarea {
+    width: 90%; }
+  .blog-details .uk-sidebar {
+    margin-top: 40px; }
+  .services-details .uk-flex {
+    display: block; }
+  .services-details .uk-width-1-5 {
+    width: 100%; }
+  .services-details .uk-sidebar {
+    margin-top: 40px; }
+  .services-details-desc h3 {
+    font-size: 20px; }
+  .project-details .uk-flex {
+    display: block; }
+  .project-details .uk-width-1-5 {
+    width: 100%; }
+  .project-details-desc h3 {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-img {
+    position: relative;
+    top: 0; }
+    .about-img .about-img2 {
+      left: 0;
+      bottom: 0; }
+    .about-img .uk-button {
+      bottom: 0; } }
+
+@media only screen and (min-width: 1650px) {
+  .main-banner {
+    background-position: 74%; }
+  .about-img {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    text-align: right; }
+    .about-img .about-img2 {
+      position: absolute;
+      left: -130px;
+      bottom: -30px; }
+    .about-img .shape-img {
+      position: absolute;
+      left: 115px;
+      top: 12%; }
+    .about-img .about-img1 {
+      width: 100%; } }
