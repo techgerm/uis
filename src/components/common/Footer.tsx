@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo2.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
-import GoTop from "./GoTop";
+import { GoTop } from "./GoTop";
 
-class Footer extends React.Component {
+export class Footer extends React.Component {
 	render() {
 		return (
 			<footer className="footer-area uk-dark uk-footer">
@@ -127,5 +127,3 @@ class Footer extends React.Component {
 		);
 	}
 }
-
-export default Footer;

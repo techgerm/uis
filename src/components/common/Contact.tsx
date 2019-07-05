@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./node_modules/isomorphic-fetch";
 import mapImg from "../../assets/images/map2.png";
 
-class Contact extends React.Component {
+export class Contact extends React.Component {
 	state = {
 		submitting: false,
 		submitted: false,
@@ -209,5 +208,3 @@ class Contact extends React.Component {
 		);
 	}
 }
-
-export default Contact;

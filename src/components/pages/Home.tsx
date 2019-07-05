@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../sections/Banner";
 import Features from "../sections/Features";
-import SeparatedBar from "../common/SeparatedBar";
+import { SeparatedBar } from "../common/SeparatedBar";
 import About from "../sections/About";
 import Services from "../sections/Services";
 import Project from "../sections/Project";
@@ -10,8 +10,8 @@ import PartnerLogo from "../sections/PartnerLogo";
 import Team from "../sections/Team";
 import Newsletter from "../sections/Newsletter";
 import LatestNews from "../sections/LatestNews";
-import Contact from "../sections/Contact";
-import Footer from "../common/Footer";
+import { Contact } from "../sections/Contact";
+import { Footer } from "../common/Footer";
 
 class Home extends React.Component {
 	render() {

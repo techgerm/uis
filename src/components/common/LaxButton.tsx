@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import lax from "lax.js";
 import { Link } from "react-router-dom";
 
-class LaxButton extends React.Component {
+export class LaxButton extends React.Component {
 	el: Element | Text | null | undefined;
 
 	componentDidMount() {
@@ -27,5 +27,3 @@ class LaxButton extends React.Component {
 		);
 	}
 }
-
-export default LaxButton;

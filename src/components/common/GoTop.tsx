@@ -5,7 +5,7 @@ interface Props {
 	delayInMs: number;
 }
 
-class GoTop extends React.Component<Props> {
+export class GoTop extends React.Component<Props> {
 	state = {
 		intervalId: 0,
 		thePosition: false
@@ -48,5 +48,3 @@ class GoTop extends React.Component<Props> {
 		return <React.Fragment>{this.renderGoTopIcon()}</React.Fragment>;
 	}
 }
-
-export default GoTop;

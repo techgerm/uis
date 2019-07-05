@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/navigation/NavBar";
-import Preloader from "./components/common/Preloader";
+import { Preloader } from "./components/common/Preloader";
 import Home from "./components/pages/Home";
 // import ServiceDetails from './components/Pages/ServiceDetails';
 // import ProjectDetails from './components/Pages/ProjectDetails';

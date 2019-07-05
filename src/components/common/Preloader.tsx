@@ -1,6 +1,6 @@
 import React from "react";
 
-const Preloader = () => {
+export const Preloader = () => {
 	return (
 		<div className="uk-preloader">
 			<div className="spinner">
@@ -10,5 +10,3 @@ const Preloader = () => {
 		</div>
 	);
 };
-
-export default Preloader;
