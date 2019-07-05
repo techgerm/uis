@@ -4,7 +4,7 @@
 	"private": true,
 	"homepage": "https://unitedinternationalservices.com",
 	"scripts": {
-		"build": "node-sass src/ -o src/ && react-scripts build",
+		"build": "node-sass src/ -o src/ --source-map true && react-scripts build",
 		"start": "react-scripts start",
 		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
 		"lint": "tslint -p tsconfig.json",

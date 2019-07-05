@@ -4,8 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-responsive.css
 style.css
+style.css.map
+responsive.css
+responsive.css.map
 
 # testing
 /coverage
