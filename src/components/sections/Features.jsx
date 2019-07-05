@@ -2,7 +2,7 @@ import React from "react";
 import dot from "../../assets/images/dot.png";
 import whiteDot from "../../assets/images/white-dot.png";
 
-class Features extends React.Component {
+export class Features extends React.Component {
 	render() {
 		return (
 			<section className="uk-features  features-area uk-section uk-padding-remove-top">
@@ -70,5 +70,3 @@ class Features extends React.Component {
 		);
 	}
 }
-
-export default Features;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ModalVideo from "react-modal-video";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
-class Banner extends React.Component {
+export class Banner extends React.Component {
 	state = {
 		isOpen: false
 	};
@@ -59,5 +59,3 @@ class Banner extends React.Component {
 		);
 	}
 }
-
-export default Banner;

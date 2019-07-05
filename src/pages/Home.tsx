@@ -1,19 +1,19 @@
 import React from "react";
-import Banner from "../components/sections/Banner";
-import Features from "../components/sections/Features";
+import { Banner } from "../components/sections/Banner";
+import { Features } from "../components/sections/Features";
 import { SeparatedBar } from "../components/common/SeparatedBar";
-import About from "../components/sections/About";
-import Services from "../components/sections/Services";
-import Project from "../components/sections/Project";
-import Testimonials from "../components/sections/Testimonials";
-import PartnerLogo from "../components/sections/PartnerLogo";
-import Team from "../components/sections/Team";
-import Newsletter from "../components/sections/Newsletter";
-import LatestNews from "../components/sections/LatestNews";
+import { About } from "../components/sections/About";
+import { Services } from "../components/sections/Services";
+import { Project } from "../components/sections/Project";
+import { Testimonials } from "../components/sections/Testimonials";
+import { PartnerLogo } from "../components/sections/PartnerLogo";
+import { Team } from "../components/sections/Team";
+import { Newsletter } from "../components/sections/Newsletter";
+import { LatestNews } from "../components/sections/LatestNews";
 import { Contact } from "../components/sections/Contact";
 import { Footer } from "../components/common/Footer";
 
-class Home extends React.Component {
+export class Home extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
@@ -55,5 +55,3 @@ class Home extends React.Component {
 		);
 	}
 }
-
-export default Home;

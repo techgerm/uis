@@ -6,7 +6,7 @@ import about2 from "../../assets/images/about2.jpg";
 import one from "../../assets/images/1.png";
 import { LaxButton } from "../common/LaxButton";
 
-class About extends React.Component {
+export class About extends React.Component {
 	// TODO: Pass in language property?
 	constructor(props: any) {
 		super(props);
@@ -74,5 +74,3 @@ class About extends React.Component {
 		);
 	}
 }
-
-export default About;

@@ -18,7 +18,7 @@ const options = {
 	navText: ["<i class='flaticon-back'></i>", "<i class='flaticon-right'></i>"]
 };
 
-class Testimonials extends React.Component {
+export class Testimonials extends React.Component {
 	state = {
 		isOpen: false
 	};
@@ -123,5 +123,3 @@ class Testimonials extends React.Component {
 		);
 	}
 }
-
-export default Testimonials;
