@@ -4,16 +4,15 @@
 	"private": true,
 	"homepage": "https://unitedinternationalservices.com",
 	"scripts": {
-		"build": "node-sass src/ -o src/ --source-map true && react-scripts build",
 		"start": "react-scripts start",
-		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
+		"build": "node-sass src/ -o src/ --source-map true && react-scripts build",
 		"lint": "tslint -p tsconfig.json",
 		"test": "react-scripts test",
+		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
 		"clean": "rm -rf node_modules/",
 		"preversion": "npm run build && CI=true npm test && npm run lint",
 		"version": "npm run format && git add --all",
-		"postversion": "git push && git push --tags && firebase deploy",
-		"eject": "react-scripts eject"
+		"postversion": "git push && git push --tags && firebase deploy"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
