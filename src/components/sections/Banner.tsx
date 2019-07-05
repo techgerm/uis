@@ -11,8 +11,9 @@ class Banner extends React.Component {
 	openModal = () => {
 		this.setState({ isOpen: true });
 	};
+
 	render() {
-		let modalStyles = { overlay: { zIndex: 100000000000000 } };
+		const modalStyles = { overlay: { zIndex: 100000000000000 } };
 		return (
 			<div>
 				<div id="home" className="uk-banner main-banner item-bg1">

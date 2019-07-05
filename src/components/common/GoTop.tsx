@@ -30,8 +30,8 @@ class GoTop extends React.Component<Props> {
 	};
 
 	scrollToTop = () => {
-		let intervalId = setInterval(this.onScrollStep, this.props.delayInMs);
-		this.setState({ intervalId: intervalId });
+		const intervalId = setInterval(this.onScrollStep, this.props.delayInMs);
+		this.setState({ intervalId });
 	};
 
 	renderGoTopIcon = () => {

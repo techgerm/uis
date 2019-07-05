@@ -31,7 +31,7 @@ class Contact extends React.Component {
 			if (res.status === 200) {
 				this.setState({ submitted: true });
 			}
-			let formFields = Object.assign({}, this.state.formFields);
+			const formFields = Object.assign({}, this.state.formFields);
 			formFields.name = "";
 			formFields.email = "";
 			formFields.phone = "";
@@ -42,31 +42,31 @@ class Contact extends React.Component {
 	};
 
 	nameChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		let formFields = Object.assign({}, this.state.formFields);
+		const formFields = Object.assign({}, this.state.formFields);
 		formFields.name = e.target.value;
 		this.setState({ formFields });
 	};
 
 	emailChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		let formFields = Object.assign({}, this.state.formFields);
+		const formFields = Object.assign({}, this.state.formFields);
 		formFields.email = e.target.value;
 		this.setState({ formFields });
 	};
 
 	phoneChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		let formFields = Object.assign({}, this.state.formFields);
+		const formFields = Object.assign({}, this.state.formFields);
 		formFields.phone = e.target.value;
 		this.setState({ formFields });
 	};
 
 	subjectChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		let formFields = Object.assign({}, this.state.formFields);
+		const formFields = Object.assign({}, this.state.formFields);
 		formFields.subject = e.target.value;
 		this.setState({ formFields });
 	};
 
 	textChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		let formFields = Object.assign({}, this.state.formFields);
+		const formFields = Object.assign({}, this.state.formFields);
 		formFields.text = e.target.value;
 		this.setState({ formFields });
 	};

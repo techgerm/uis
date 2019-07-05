@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import mapImg from "../../assets/images/map.png";
-import "../../../node_modules/isomorphic-fetch";
+import "isomorphic-fetch";
 
 class Contact extends React.Component {
 	state = {

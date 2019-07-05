@@ -40,7 +40,8 @@
 		"uikit": "^3.1.5"
 	},
 	"devDependencies": {
-		"prettier": "^1.17.1"
+		"prettier": "^1.17.1",
+		"tslint-config-prettier": "^1.18.0"
 	},
 	"browserslist": {
 		"production": [

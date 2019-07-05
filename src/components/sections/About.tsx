@@ -14,7 +14,7 @@ class About extends React.Component {
 
 		document.addEventListener(
 			"scroll",
-			function(x) {
+			x => {
 				lax.update(window.scrollY);
 			},
 			false
