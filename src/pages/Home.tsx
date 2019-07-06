@@ -6,8 +6,8 @@ import { About } from "../components/sections/About";
 import { Services } from "../components/sections/Services";
 import { Testimonials } from "../components/sections/Testimonials";
 import { PartnerLogo } from "../components/sections/PartnerLogo";
-// import { Newsletter } from "../components/sections/Newsletter"; phase 2
-// import { LatestNews } from "../components/sections/LatestNews"; //phase 2
+// import { Newsletter } from "../components/sections/Newsletter"; --Implement in phase 2
+// import { LatestNews } from "../components/sections/LatestNews"; --Implement in phase 2
 import { Contact } from "../components/sections/Contact";
 import { Footer } from "../components/common/Footer";
 
