@@ -50,11 +50,11 @@ export class Navigation extends React.Component {
 										Clients
 									</AnchorLink>
 								</li>
-								<li>
+								{/*TODO: <li> --Implement in phase 2
 									<AnchorLink offset={() => 100} href="#blog">
 										Blog
 									</AnchorLink>
-								</li>
+								</li> */}
 								<li>
 									<AnchorLink offset={() => 100} href="#contact">
 										Contact
@@ -115,11 +115,11 @@ export class Navigation extends React.Component {
 												Clients
 											</AnchorLink>
 										</li>
-										<li>
+										{/*TODO:<li> --Implement in phase 2
 											<AnchorLink href="#blog" offset={() => 100}>
 												Blog
 											</AnchorLink>
-										</li>
+										</li> */}
 										<li>
 											<AnchorLink href="#contact" offset={() => 100}>
 												Contact
