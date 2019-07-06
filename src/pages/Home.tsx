@@ -6,8 +6,8 @@ import { About } from "../components/sections/About";
 import { Services } from "../components/sections/Services";
 import { Testimonials } from "../components/sections/Testimonials";
 import { PartnerLogo } from "../components/sections/PartnerLogo";
-// import { Newsletter } from "../components/sections/Newsletter"; --Implement in phase 2
-// import { LatestNews } from "../components/sections/LatestNews"; --Implement in phase 2
+// TODO: import { Newsletter } from "../components/sections/Newsletter"; --Implement in phase 2
+// TODO: import { LatestNews } from "../components/sections/LatestNews"; --Implement in phase 2
 import { Contact } from "../components/sections/Contact";
 import { Footer } from "../components/common/Footer";
 
@@ -34,9 +34,9 @@ export class Home extends React.Component {
 				{/* Partner Area */}
 				<PartnerLogo />
 				{/* Subscribe Area */}
-				{/* <Newsletter /> */}
+				{/*TODO: <Newsletter /> */}
 				{/* Blog Area */}
-				{/* <LatestNews /> */}
+				{/*TODO: <LatestNews /> */}
 				{/* Vertical line */}
 				<SeparatedBar />
 				{/* Contact Area */}
