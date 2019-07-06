@@ -46,18 +46,8 @@ export class Navigation extends React.Component {
 									</AnchorLink>
 								</li>
 								<li>
-									<AnchorLink offset={() => 100} href="#project">
-										Project
-									</AnchorLink>
-								</li>
-								<li>
 									<AnchorLink offset={() => 100} href="#clients">
 										Clients
-									</AnchorLink>
-								</li>
-								<li>
-									<AnchorLink offset={() => 100} href="#team">
-										Team
 									</AnchorLink>
 								</li>
 								<li>
@@ -121,18 +111,8 @@ export class Navigation extends React.Component {
 											</AnchorLink>
 										</li>
 										<li>
-											<AnchorLink href="#project" offset={() => 100}>
-												Project
-											</AnchorLink>
-										</li>
-										<li>
 											<AnchorLink href="#clients" offset={() => 100}>
 												Clients
-											</AnchorLink>
-										</li>
-										<li>
-											<AnchorLink href="#team" offset={() => 100}>
-												Team
 											</AnchorLink>
 										</li>
 										<li>
