@@ -3,7 +3,7 @@ import lax from "lax.js";
 import signature from "../../assets/images/signature.png";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.jpg";
-import one from "../../assets/images/1.png";
+import one from "../../assets/images/blue-circle.png";
 import { LaxButton } from "../common/LaxButton";
 
 export class About extends React.Component {
