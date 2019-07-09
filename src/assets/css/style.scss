@@ -1494,8 +1494,7 @@ Feedback CSS
 /*================================================
 Partner CSS
 =================================================*/
-.partner-area {
-    border-bottom: 1px solid #f0f0f0;
+.partner-area {    
     
     .item {
         text-align: center;
@@ -3115,7 +3114,7 @@ Dark Home CSS
     }
 
     &.partner-area {
-        border-bottom-color: $sub-black-color;
+        // Styles for partner area  
     }
 
     .single-team {
