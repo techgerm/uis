@@ -17,6 +17,7 @@ $sub-black-color: #111111;
 $transition: .5s;
 $font-size: 14px;
 
+// Start of critical mobile styles
 @media only #{$media} and ($feature_max : $value_one) {
     body {
         font-size: $font-size;
@@ -45,13 +46,11 @@ $font-size: 14px;
 
     .header-area {
         padding: {
-            top: 15px;
-            bottom: 15px;
+            top: 15px;            
         }
         &.uk-sticky-fixed {
             padding: {
-                top: 15px;
-                bottom: 15px;
+                top: 15px;                
             }
         }
         #navbar-toggle {
@@ -66,11 +65,7 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: left bottom;
-        padding: {
-            top: 145px;
-            bottom: 600px;
-        }
+        background-position: left bottom;        
     }
     .main-banner-content {
         max-width: unset;
@@ -575,6 +570,7 @@ $font-size: 14px;
         }
     }
 }
+// End of critical mobile styles
 
 @media only #{$media} and ($feature_min : $value_two) and ($feature_max : $value_three) {
     body {
@@ -591,13 +587,11 @@ $font-size: 14px;
 
     .header-area {
         padding: {
-            top: 20px;
-            bottom: 20px;
+            top: 20px;            
         }
         &.uk-sticky-fixed {
             padding: {
-                top: 25px;
-                bottom: 25px;
+                top: 25px;                
             }
         }
         #navbar-toggle {
@@ -612,11 +606,7 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: right bottom;
-        padding: {
-            top: 200px;
-            bottom: 540px;
-        }
+        background-position: right bottom;        
     }
     .main-banner-content {
         h1 {
@@ -855,27 +845,6 @@ $font-size: 14px;
     .main-banner {
         background: {
             position: 74%;
-        }
-    }
-
-    .about-img {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        text-align: right;
-
-        .about-img2 {
-            position: absolute;
-            left: -130px;
-            bottom: -30px;
-        }
-        .shape-img {
-            position: absolute;
-            left: 115px;
-            top: 12%;
-        }
-        .about-img1 {
-            width: 100%;
         }
     }
 }

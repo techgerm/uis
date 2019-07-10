@@ -115,6 +115,10 @@ a {
         display: table-cell;
     }
 }
+#logo{
+    // position: absolute;
+    margin-top: 30px;
+}
 .bg-gray {
     background-color: #f4f4f4;
 }
@@ -290,10 +294,9 @@ Header CSS
     top: 0;
     width: 100%;
     height: auto;
-    z-index: 9999;
+    z-index: 9999;   
     padding: {
-        top: 60px;
-        bottom: 35px;
+        top: 60px;        
     }
 
     .uk-navbar-container {
@@ -305,8 +308,7 @@ Header CSS
         background: $white-color;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
         padding: {
-            top: 30px;
-            bottom: 30px;
+            top: 30px;            
         }
     }
     #navbar-toggle {
@@ -525,7 +527,7 @@ Main Banner CSS
 =================================================*/
 .main-banner {
     height: 860px;
-    background: {
+    background: {    
         position: right;
         repeat: no-repeat;
         size: 575px;
@@ -533,9 +535,6 @@ Main Banner CSS
     }
     position: relative;
     z-index: 1;
-}
-.item-bg1 {
-    background-image: url('../images/man1.png');
 }
 .item-bg2 {
     background-image: url('../images/beard-man.png');

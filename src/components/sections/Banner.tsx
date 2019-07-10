@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ModalVideo from "react-modal-video";
-import "../../../node_modules/react-modal-video/scss/modal-video.scss";
+import hablmaos from "../../assets/images/hablamos-espanol.png";
+import hablmaosMobile from "../../assets/images/hablamos-espanol-mobile.png";
+import logoMain from "../../assets/images/official-logo.png";
+import logoMid from "../../assets/images/official-logo-mobile-mid.png";
+const smallestMobileWidth = "(max-width: 767px)";
 
 export class Banner extends React.Component {
 	state = {
@@ -13,10 +15,9 @@ export class Banner extends React.Component {
 	};
 
 	render() {
-		const modalStyles = { overlay: { zIndex: 100000000000000 } };
 		return (
 			<div>
-				<div id="home" className="uk-banner main-banner item-bg1">
+				<div id="home" className="uk-banner main-banner">
 					<div className="d-table">
 						<div className="d-table-cell">
 							<div className="uk-container">
@@ -30,31 +31,22 @@ export class Banner extends React.Component {
 										aliqua. Risus commodo viverra maecenas accumsan lacus vel
 										facilisis.
 									</p>
-									<Link to="#" className="uk-button uk-button-default">
-										Get Started
-									</Link>
-									<Link
-										onClick={e => {
-											e.preventDefault();
-											this.openModal();
-										}}
-										to="#"
-										className="video-btn popup-youtube"
-									>
-										<span uk-icon="play" /> Watch Video
-									</Link>
+									<picture>
+										<source
+											media={smallestMobileWidth}
+											srcSet={hablmaosMobile}
+										></source>
+										<img src={hablmaos} alt="hablamos espanol"></img>
+									</picture>
 								</div>
 							</div>
 						</div>
+						<picture>
+							<source media={smallestMobileWidth} srcSet={logoMid}></source>
+							<img id="logo" src={logoMain} alt="logo"></img>
+						</picture>
 					</div>
 				</div>
-				<ModalVideo
-					style={modalStyles}
-					channel="youtube"
-					isOpen={this.state.isOpen}
-					videoId="bk7McNUjWgw"
-					onClose={() => this.setState({ isOpen: false })}
-				/>
 			</div>
 		);
 	}
