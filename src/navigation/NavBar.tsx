@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import logo from "../assets/images/flags.png";
+import flagsLogo from "../assets/images/flags.png";
 import "../assets/css/uikit.min.css";
 import "../assets/css/style.scss";
 import "../assets/css/responsive.scss";
@@ -27,7 +27,7 @@ export class Navigation extends React.Component {
 
 						<nav
 							className="uk-navbar-container"
-							data-uk-scrollspy-nav="offset: 0; closest: li; scroll: true"
+							data-uk-scrollspy-nav="offset: 30; closest: li; scroll: true"
 						>
 							<ul className="uk-navbar-nav">
 								<li className="uk-active">
@@ -73,9 +73,9 @@ export class Navigation extends React.Component {
 				>
 					<div className="uk-container">
 						<div className="uk-navbar">
-							<div className="logo uk-navbar-left">
+							<div className="uk-navbar-left">
 								<Link onClick={() => window.location.reload()} to="/">
-									<img src={logo} alt="logo" />
+									<img className="flag-logo" src={flagsLogo} alt="logo" />
 								</Link>
 							</div>
 
@@ -92,7 +92,7 @@ export class Navigation extends React.Component {
 							<div className="navbar uk-navbar-right">
 								<nav
 									className="uk-navbar-container"
-									data-uk-scrollspy-nav="offset: 0; closest: li; scroll: true"
+									data-uk-scrollspy-nav="offset: 20; closest: li; scroll: true"
 								>
 									<ul className="uk-navbar-nav">
 										<li className="uk-active">

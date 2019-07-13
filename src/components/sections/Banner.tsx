@@ -1,6 +1,6 @@
 import React from "react";
-import hablmaos from "../../assets/images/hablamos-espanol.png";
-import hablmaosMobile from "../../assets/images/hablamos-espanol-mobile.png";
+import hablamos from "../../assets/images/hablamos-espanol.png";
+import hablamosMobile from "../../assets/images/hablamos-espanol-mobile.png";
 import logoMain from "../../assets/images/official-logo.png";
 import logoMid from "../../assets/images/official-logo-mobile-mid.png";
 const smallestMobileWidth = "(max-width: 767px)";
@@ -17,13 +17,13 @@ export class Banner extends React.Component {
 	render() {
 		return (
 			<div>
-				<div id="home" className="uk-banner main-banner">
+				<div id="home" className="uk-banner main-banner main-logo">
 					<div className="d-table">
 						<div className="d-table-cell">
 							<div className="uk-container">
 								<div className="main-banner-content">
 									<h1>
-										Trusted Digital <br /> agency
+										United International <br /> Services
 									</h1>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -34,17 +34,13 @@ export class Banner extends React.Component {
 									<picture>
 										<source
 											media={smallestMobileWidth}
-											srcSet={hablmaosMobile}
+											srcSet={hablamosMobile}
 										></source>
-										<img src={hablmaos} alt="hablamos espanol"></img>
+										<img src={hablamos} alt="hablamos espanol"></img>
 									</picture>
 								</div>
 							</div>
 						</div>
-						<picture>
-							<source media={smallestMobileWidth} srcSet={logoMid}></source>
-							<img id="logo" src={logoMain} alt="logo"></img>
-						</picture>
 					</div>
 				</div>
 			</div>

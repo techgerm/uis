@@ -17,13 +17,16 @@ $sub-black-color: #111111;
 $transition: .5s;
 $font-size: 14px;
 
-// Start of critical mobile styles
 @media only #{$media} and ($feature_max : $value_one) {
     body {
         font-size: $font-size;
     }
     p {
         font-size: $font-size;
+    }
+    .main-logo {
+        background-image: url('../images/uis-logo-without-name.png');
+        background-size: contain;
     }
     .section-title {
         margin-bottom: 40px !important;
@@ -44,13 +47,20 @@ $font-size: 14px;
         }
     }
 
+    .flag-logo {
+        height: 35px;
+        width: auto;
+    }
+
     .header-area {
         padding: {
-            top: 15px;            
+            top: 15px;
+            bottom: 15px;          
         }
         &.uk-sticky-fixed {
             padding: {
-                top: 15px;                
+                top: 15px;
+                bottom: 15px;               
             }
         }
         #navbar-toggle {
@@ -65,7 +75,11 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: left bottom;        
+        background-position: left bottom;
+        padding: {
+            top: 50px;
+            bottom: 475px;
+        }
     }
     .main-banner-content {
         max-width: unset;
@@ -570,7 +584,6 @@ $font-size: 14px;
         }
     }
 }
-// End of critical mobile styles
 
 @media only #{$media} and ($feature_min : $value_two) and ($feature_max : $value_three) {
     body {
@@ -585,13 +598,20 @@ $font-size: 14px;
         }
     }
 
+    .flag-logo {
+        height: 35px;
+        width: auto;
+    }
+
     .header-area {
         padding: {
-            top: 20px;            
+            top: 20px;
+            bottom: 20px;
         }
         &.uk-sticky-fixed {
             padding: {
-                top: 25px;                
+                top: 18px;
+                bottom: 18px;
             }
         }
         #navbar-toggle {
@@ -606,7 +626,11 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: right bottom;        
+        background-position: right bottom;
+        padding: {
+            top: 200px;
+            bottom: 540px;
+        }
     }
     .main-banner-content {
         h1 {
@@ -845,6 +869,27 @@ $font-size: 14px;
     .main-banner {
         background: {
             position: 74%;
+        }
+    }
+
+    .about-img {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        text-align: right;
+
+        .about-img2 {
+            position: absolute;
+            left: -130px;
+            bottom: -30px;
+        }
+        .shape-img {
+            position: absolute;
+            left: 115px;
+            top: 12%;
+        }
+        .about-img1 {
+            width: 100%;
         }
     }
 }

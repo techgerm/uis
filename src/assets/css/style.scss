@@ -115,10 +115,6 @@ a {
         display: table-cell;
     }
 }
-#logo{
-    // position: absolute;
-    margin-top: 30px;
-}
 .bg-gray {
     background-color: #f4f4f4;
 }
@@ -288,6 +284,10 @@ Preloader CSS
 /*================================================
 Header CSS
 =================================================*/
+.flag-logo {
+    height: 50px;
+    width: auto;
+}
 .header-area {
     position: absolute;
     left: 0;
@@ -296,7 +296,8 @@ Header CSS
     height: auto;
     z-index: 9999;   
     padding: {
-        top: 60px;        
+        top: 60px;
+        bottom: 35px;
     }
 
     .uk-navbar-container {
@@ -308,7 +309,8 @@ Header CSS
         background: $white-color;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
         padding: {
-            top: 30px;            
+            top: 18px;
+            bottom: 18px;
         }
     }
     #navbar-toggle {
@@ -536,6 +538,9 @@ Main Banner CSS
     position: relative;
     z-index: 1;
 }
+.main-logo {
+    background-image: url('../images/uis-logo-without-name.png');
+}
 .item-bg2 {
     background-image: url('../images/beard-man.png');
 }
@@ -547,14 +552,14 @@ Main Banner CSS
   
     h1 {
       font: {
-        size: 65px;
+        size: 50px;        
         weight: 700;
       }
       position: relative;
       z-index: 1;
-      line-height: 63px;
-      padding: 8px 0;
-      margin: 0;
+      line-height: 50px;
+      padding: 8px 0;  
+      margin-left: 0px;
   
       &::before {
         content: "";
