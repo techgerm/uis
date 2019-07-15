@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import lax from "lax.js";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.jpg";
