@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import mapImg from "../../assets/images/map.png";
-// testing pre commit hooks
+
 export class Contact extends React.Component {
 	state = {
 		submitting: false,
