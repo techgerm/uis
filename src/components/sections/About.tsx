@@ -5,7 +5,11 @@ import about2 from "../../assets/images/about2.jpg";
 import one from "../../assets/images/blue-circle.png";
 import { LaxButton } from "../common/LaxButton";
 
-export class About extends React.Component {
+interface AboutState {
+	hablamosLeftOffset: number;
+}
+
+export class About extends React.Component<any, AboutState> {
 	// TODO: Pass in language property?
 	constructor(props: any) {
 		super(props);
@@ -20,7 +24,31 @@ export class About extends React.Component {
 		);
 
 		lax.update(window.scrollY);
+
+		// Set initial state
+		this.state = {
+			hablamosLeftOffset: 0
+		};
 	}
+
+	componentDidMount() {
+		this.setHablamosLeftOffset();
+		window.addEventListener("resize", this.setHablamosLeftOffset.bind(this));
+	}
+
+	setHablamosLeftOffset = () => {
+		const a: HTMLElement | null = document.getElementById(
+			"hablamos-espanol-container"
+		);
+
+		let offset = 0;
+		if (a != null) {
+			offset = a.offsetLeft;
+		}
+
+		this.setState({ hablamosLeftOffset: offset });
+	};
+
 	render() {
 		return (
 			<section id="about" className="uk-about  about-area uk-section">
@@ -51,8 +79,15 @@ export class About extends React.Component {
 										consultants who live and breathe search engine marketing.
 									</p>
 								</div>
-								<div className="hablamos-espanol-container">
-									<h3 className="hablamos-espanol">HABLAMOS ESPAÑOL</h3>
+								<div id="hablamos-espanol-container">
+									<h3
+										id="hablamos-espanol"
+										style={{
+											paddingLeft: this.state.hablamosLeftOffset
+										}}
+									>
+										HABLAMOS ESPAÑOL
+									</h3>
 								</div>
 							</div>
 						</div>
