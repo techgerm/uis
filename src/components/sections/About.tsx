@@ -52,7 +52,7 @@ export class About extends React.Component {
 									</p>
 								</div>
 								<div className="hablamos-espanol-container">
-									<h2 className="hablamos-espanol">HABLAMOS ESPAÑOL</h2>
+									<h3 className="hablamos-espanol">HABLAMOS ESPAÑOL</h3>
 								</div>
 							</div>
 						</div>

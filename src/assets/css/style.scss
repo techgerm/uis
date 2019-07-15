@@ -801,12 +801,13 @@ About CSS
         height: 60px;
         
         .hablamos-espanol {
+            display: table;
             position: absolute;
+            font-weight: 600;
             left: 0;
             margin-top: 0px;
             margin-bottom: 0px;
-            display: table;
-            padding: 10px 10px 10px 100px;
+            padding: 10px 20px 10px 100px;
             background-color: $main-color;
             color: white;
         }
