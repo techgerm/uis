@@ -528,7 +528,7 @@ Header CSS
 Main Banner CSS
 =================================================*/
 .main-banner {
-    height: 860px;
+    height: 650px;
     background: {    
         position: right;
         repeat: no-repeat;
@@ -539,13 +539,7 @@ Main Banner CSS
     z-index: 1;
 }
 .main-logo {
-    background-image: url('../images/uis-logo-without-name.png');
-}
-.item-bg2 {
-    background-image: url('../images/beard-man.png');
-}
-.item-bg3 {
-    background-image: url('../images/main-women.png');
+    background-image: url('../images/main-logo.png');
 }
 .main-banner-content {
     max-width: 560px;
@@ -800,10 +794,23 @@ About CSS
             margin-top: 0;
             font-size: 20px;
         }
-        .signature {
-            margin-top: 35px;
-        }
     }
+    .hablamos-espanol-container {
+        display: flex;
+        margin-top: 30px;
+        height: 60px;
+        
+        .hablamos-espanol {
+            position: absolute;
+            left: 0;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            display: table;
+            padding: 10px 10px 10px 100px;
+            background-color: $main-color;
+            color: white;
+        }
+    }    
 }
 .about-img {
     position: absolute;
@@ -3117,9 +3124,9 @@ Dark Home CSS
         }
     }
 
-    &.partner-area {
-        // Styles for partner area  
-    }
+    // &.partner-area {
+    //     // Styles for partner area  
+    // }
 
     .single-team {
         .team-content {

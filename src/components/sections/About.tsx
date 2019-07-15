@@ -1,6 +1,5 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import lax from "lax.js";
-import signature from "../../assets/images/signature.png";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.jpg";
 import one from "../../assets/images/blue-circle.png";
@@ -51,10 +50,9 @@ export class About extends React.Component {
 										We are an experienced and talented team of passionate
 										consultants who live and breathe search engine marketing.
 									</p>
-
-									<div className="signature">
-										<img src={signature} alt="signature" />
-									</div>
+								</div>
+								<div className="hablamos-espanol-container">
+									<h2 className="hablamos-espanol">HABLAMOS ESPAÑOL</h2>
 								</div>
 							</div>
 						</div>

@@ -1,9 +1,4 @@
 import React from "react";
-import hablamos from "../../assets/images/hablamos-espanol.png";
-import hablamosMobile from "../../assets/images/hablamos-espanol-mobile.png";
-import logoMain from "../../assets/images/official-logo.png";
-import logoMid from "../../assets/images/official-logo-mobile-mid.png";
-const smallestMobileWidth = "(max-width: 767px)";
 
 export class Banner extends React.Component {
 	state = {
@@ -23,7 +18,7 @@ export class Banner extends React.Component {
 							<div className="uk-container">
 								<div className="main-banner-content">
 									<h1>
-										United International <br /> Services
+										Some awesome <br /> Tag line
 									</h1>
 									<p>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -31,13 +26,6 @@ export class Banner extends React.Component {
 										aliqua. Risus commodo viverra maecenas accumsan lacus vel
 										facilisis.
 									</p>
-									<picture>
-										<source
-											media={smallestMobileWidth}
-											srcSet={hablamosMobile}
-										></source>
-										<img src={hablamos} alt="hablamos espanol"></img>
-									</picture>
 								</div>
 							</div>
 						</div>
