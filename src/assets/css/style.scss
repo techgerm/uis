@@ -284,13 +284,17 @@ Preloader CSS
 /*================================================
 Header CSS
 =================================================*/
+.flag-logo {
+    height: 50px;
+    width: auto;
+}
 .header-area {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: auto;
-    z-index: 9999;
+    z-index: 9999;   
     padding: {
         top: 60px;
         bottom: 35px;
@@ -305,8 +309,8 @@ Header CSS
         background: $white-color;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
         padding: {
-            top: 30px;
-            bottom: 30px;
+            top: 18px;
+            bottom: 18px;
         }
     }
     #navbar-toggle {
@@ -524,8 +528,8 @@ Header CSS
 Main Banner CSS
 =================================================*/
 .main-banner {
-    height: 860px;
-    background: {
+    height: 650px;
+    background: {    
         position: right;
         repeat: no-repeat;
         size: 575px;
@@ -534,28 +538,22 @@ Main Banner CSS
     position: relative;
     z-index: 1;
 }
-.item-bg1 {
-    background-image: url('../images/man1.png');
-}
-.item-bg2 {
-    background-image: url('../images/beard-man.png');
-}
-.item-bg3 {
-    background-image: url('../images/main-women.png');
+.main-logo {
+    background-image: url('../images/main-logo.png');
 }
 .main-banner-content {
     max-width: 560px;
   
     h1 {
       font: {
-        size: 65px;
+        size: 50px;        
         weight: 700;
       }
       position: relative;
       z-index: 1;
-      line-height: 63px;
-      padding: 8px 0;
-      margin: 0;
+      line-height: 50px;
+      padding: 8px 0;  
+      margin-left: 0px;
   
       &::before {
         content: "";
@@ -796,10 +794,24 @@ About CSS
             margin-top: 0;
             font-size: 20px;
         }
-        .signature {
-            margin-top: 35px;
-        }
     }
+    .hablamos-espanol-container {
+        display: flex;
+        margin-top: 30px;
+        height: 60px;
+        
+        .hablamos-espanol {
+            display: table;
+            position: absolute;
+            font-weight: 600;
+            left: 0;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 10px 20px 10px 100px;
+            background-color: $main-color;
+            color: white;
+        }
+    }    
 }
 .about-img {
     position: absolute;
@@ -3113,9 +3125,9 @@ Dark Home CSS
         }
     }
 
-    &.partner-area {
-        // Styles for partner area  
-    }
+    // &.partner-area {
+    //     // Styles for partner area  
+    // }
 
     .single-team {
         .team-content {

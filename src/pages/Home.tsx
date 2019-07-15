@@ -1,6 +1,5 @@
 import React from "react";
 import { Banner } from "../components/sections/Banner";
-import { Features } from "../components/sections/Features";
 import { SeparatedBar } from "../components/common/SeparatedBar";
 import { About } from "../components/sections/About";
 import { Services } from "../components/sections/Services";
@@ -17,8 +16,6 @@ export class Home extends React.Component {
 			<React.Fragment>
 				{/* Main Banner */}
 				<Banner />
-				{/* Features Area */}
-				<Features />
 				{/* Vertical line */}
 				<SeparatedBar />
 				{/* About Area */}

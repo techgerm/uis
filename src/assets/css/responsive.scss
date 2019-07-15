@@ -24,6 +24,9 @@ $font-size: 14px;
     p {
         font-size: $font-size;
     }
+    .main-logo {
+        background-size: auto 60%;
+    }
     .section-title {
         margin-bottom: 40px !important;
 
@@ -43,15 +46,20 @@ $font-size: 14px;
         }
     }
 
+    .flag-logo {
+        height: 35px;
+        width: auto;
+    }
+
     .header-area {
         padding: {
             top: 15px;
-            bottom: 15px;
+            bottom: 15px;          
         }
         &.uk-sticky-fixed {
             padding: {
                 top: 15px;
-                bottom: 15px;
+                bottom: 15px;               
             }
         }
         #navbar-toggle {
@@ -66,10 +74,10 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: left bottom;
+        background-position: center bottom;
         padding: {
-            top: 145px;
-            bottom: 600px;
+            top: 50px;
+            bottom: 475px;
         }
     }
     .main-banner-content {
@@ -589,6 +597,11 @@ $font-size: 14px;
         }
     }
 
+    .flag-logo {
+        height: 35px;
+        width: auto;
+    }
+
     .header-area {
         padding: {
             top: 20px;
@@ -596,8 +609,8 @@ $font-size: 14px;
         }
         &.uk-sticky-fixed {
             padding: {
-                top: 25px;
-                bottom: 25px;
+                top: 18px;
+                bottom: 18px;
             }
         }
         #navbar-toggle {
@@ -612,10 +625,10 @@ $font-size: 14px;
 
     .main-banner {
         height: 100%;
-        background-position: right bottom;
+        background-position: center bottom;
         padding: {
-            top: 200px;
-            bottom: 540px;
+            top: 100px;
+            bottom: 500px;
         }
     }
     .main-banner-content {
