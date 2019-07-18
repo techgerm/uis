@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel3";
 import ModalVideo from "react-modal-video";
-import woman from "../../assets/images/women.jpg";
+import chatBubbles from "../../assets/images/chatbubbles.png";
 import shapeImg from "../../assets/images/blue-circle.png";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
@@ -34,20 +33,9 @@ export class Testimonials extends React.Component {
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
 						<div className="item">
 							<div className="feedback-img">
-								<img src={woman} alt="Testimonials" />
+								<img src={chatBubbles} alt="Testimonials" />
 
 								<img src={shapeImg} className="shape-img" alt="Testimonials" />
-
-								<Link
-									onClick={e => {
-										e.preventDefault();
-										this.openModal();
-									}}
-									to="#"
-									className="video-btn popup-youtube"
-								>
-									<i className="flaticon-multimedia" /> Watch Video
-								</Link>
 							</div>
 						</div>
 
