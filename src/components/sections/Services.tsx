@@ -1,5 +1,5 @@
 import React from "react";
-import { Item } from "../services/Item";
+import { Item } from "../services/ItemTemp";
 
 export class Services extends React.Component {
 	render() {
