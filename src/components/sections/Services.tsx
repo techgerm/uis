@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { Item } from "../services/Item";
 
-export class Services extends React.Component {
+export class Services extends Component {
 	render() {
 		return (
 			<section id="services" className="services-area  uk-services uk-section">
@@ -12,32 +12,17 @@ export class Services extends React.Component {
 						<div className="bar" />
 					</div>
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s">
-						<Item itemTitle="Affidavits" itemIcon="flaticon-plan"></Item>
+						<Item title="Affidavits" iconName="flaticon-plan" />
+						<Item title="Business Contracts" iconName="flaticon-think" />
+						<Item title="Power of Attorney" iconName="flaticon-shout" />
+						<Item title="Apostille Services" iconName="flaticon-analytics-1" />
+						<Item title="Live Scan" iconName="flaticon-ux-design" />
+						<Item title="Document Translation" iconName="flaticon-camera" />
+						<Item title="Wills and Living Trusts" iconName="flaticon-project" />
 						<Item
-							itemTitle="Business Contracts"
-							itemIcon="flaticon-think"
-						></Item>
-						<Item
-							itemTitle="Power of Attorney"
-							itemIcon="flaticon-shout"
-						></Item>
-						<Item
-							itemTitle="Apostille Services"
-							itemIcon="flaticon-analytics-1"
-						></Item>
-						<Item itemTitle="Live Scan" itemIcon="flaticon-ux-design"></Item>
-						<Item
-							itemTitle="Document Translation"
-							itemIcon="flaticon-camera"
-						></Item>
-						<Item
-							itemTitle="Wills and Living Trusts"
-							itemIcon="flaticon-project"
-						></Item>
-						<Item
-							itemTitle="Documentos y Trãmites Legales en Colombia"
-							itemIcon="flaticon-chat"
-						></Item>
+							title="Documentos y Trãmites Legales en Colombia"
+							iconName="flaticon-chat"
+						/>
 					</div>
 				</div>
 			</section>
