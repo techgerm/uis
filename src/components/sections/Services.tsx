@@ -15,14 +15,11 @@ export class Services extends Component {
 						<Item title="Affidavits" iconName="flaticon-plan" />
 						<Item title="Business Contracts" iconName="flaticon-think" />
 						<Item title="Power of Attorney" iconName="flaticon-shout" />
-						<Item title="Apostille Services" iconName="flaticon-analytics-1" />
+						<Item title="Apostilles" iconName="flaticon-analytics-1" />
 						<Item title="Live Scan" iconName="flaticon-ux-design" />
-						<Item title="Document Translation" iconName="flaticon-camera" />
+						<Item title="Document Translations" iconName="flaticon-camera" />
 						<Item title="Wills and Living Trusts" iconName="flaticon-project" />
-						<Item
-							title="Documentos y Trãmites Legales en Colombia"
-							iconName="flaticon-chat"
-						/>
+						<Item title="Colombia Legal" iconName="flaticon-chat" />
 					</div>
 				</div>
 			</section>
