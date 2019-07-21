@@ -1,7 +1,7 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel3";
-import ModalVideo from "react-modal-video";
-import chatBubbles from "../../assets/images/women.jpg";
+// import ModalVideo from "react-modal-video";TODO: Possible video integration
+import chatBubbles from "../../assets/images/chatbubbles.png";
 import shapeImg from "../../assets/images/blue-circle.png";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
@@ -18,13 +18,14 @@ const options = {
 };
 
 export class Testimonials extends React.Component {
-	state = {
-		isOpen: false
-	};
+	// TODO: Possible video integration
+	// state = {
+	// 	isOpen: false
+	// };
 
-	openModal = () => {
-		this.setState({ isOpen: true });
-	};
+	// openModal = () => {
+	// 	this.setState({ isOpen: true });
+	// };
 
 	render() {
 		return (
@@ -38,13 +39,13 @@ export class Testimonials extends React.Component {
 								<img src={shapeImg} className="shape-img" alt="Testimonials" />
 							</div>
 						</div>
-
-						<ModalVideo
+						{/* TODO: Possible video integration */}
+						{/* <ModalVideo
 							channel="youtube"
 							isOpen={this.state.isOpen}
 							videoId="bk7McNUjWgw"
 							onClose={() => this.setState({ isOpen: false })}
-						/>
+						/> */}
 
 						<div className="item">
 							<div className="feedback-inner">
