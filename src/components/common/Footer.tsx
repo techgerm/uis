@@ -5,6 +5,11 @@ import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
 
+// TODO:
+// 1. make flags logo with uis title
+// 2. link social media -> yelp icon? which social media platforms will uis utilize?
+// 3. get office address
+
 export class Footer extends React.Component {
 	render() {
 		return (
@@ -27,7 +32,7 @@ export class Footer extends React.Component {
 
 						<div className="item">
 							<div className="single-footer-widget">
-								<h3>New York</h3>
+								<h3>Los Angeles</h3>
 								<div className="bar" />
 
 								<div className="location">
@@ -41,32 +46,18 @@ export class Footer extends React.Component {
 
 						<div className="item">
 							<div className="single-footer-widget">
-								<h3>London</h3>
-								<div className="bar" />
-
-								<div className="location">
-									<p>
-										352/71 Second Street <br /> King Street <br /> Kingston{" "}
-										<br /> United Kingdom
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div className="item">
-							<div className="single-footer-widget">
 								<h3>Contact</h3>
 								<div className="bar" />
 
 								<ul className="contact-info">
 									<li>
-										<Link to="#">info@gunter.com</Link>
+										<Link to="#">contact@unitedinternationalservices.com</Link>
 									</li>
 									<li>
-										<Link to="#">fax@gunter.com</Link>
+										<Link to="#">support@unitedinternationalservices.com</Link>
 									</li>
 									<li>
-										<Link to="#">+44 478 541 7452</Link>
+										<Link to="#">661-993-7968</Link>
 									</li>
 								</ul>
 								<ul className="social">
@@ -98,7 +89,9 @@ export class Footer extends React.Component {
 					<div className="copyright-area">
 						<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-2@s">
 							<div className="item">
-								<p>© EnvyTheme. All Rights Reserved, 2019</p>
+								<p>
+									© United International Services LLC All Rights Reserved, 2019
+								</p>
 							</div>
 
 							<div className="item">
