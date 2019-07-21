@@ -1,7 +1,7 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel3";
 import ModalVideo from "react-modal-video";
-import chatBubbles from "../../assets/images/chatbubbles.png";
+import chatBubbles from "../../assets/images/women.jpg";
 import shapeImg from "../../assets/images/blue-circle.png";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
 
