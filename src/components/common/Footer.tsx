@@ -1,14 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/Official-Logo-Web-Footer.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
-
-// TODO:
-// 1. make flags logo with uis title
-// 2. link social media -> yelp icon? which social media platforms will uis utilize?
-// 3. get office address
 
 export class Footer extends React.Component {
 	render() {
@@ -23,6 +18,7 @@ export class Footer extends React.Component {
 										<img src={logo} alt="logo" />
 									</Link>
 								</div>
+								{/* TODO: Add short description */}
 								<p>
 									Lorem ipsum dolor consectetur adipiscing elit, eiusmod tempor
 									ut labore et dolore magna aliqua.
@@ -37,8 +33,8 @@ export class Footer extends React.Component {
 
 								<div className="location">
 									<p>
-										198 Collective Street <br /> Manhattan <br /> Kingston{" "}
-										<br /> United State
+										20207 Saticoy Street <br /> Second Floor <br /> Winnetka CA
+										91306 <br /> United States
 									</p>
 								</div>
 							</div>
@@ -62,6 +58,7 @@ export class Footer extends React.Component {
 								</ul>
 								<ul className="social">
 									<li>
+										{/* TODO: Get social media links */}
 										<Link to="#">
 											<i className="flaticon-logo" />
 										</Link>
