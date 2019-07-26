@@ -9,12 +9,13 @@ export class Footer extends React.Component {
 	render() {
 		return (
 			<footer className="footer-area uk-dark uk-footer">
+				{/* original: <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s">*/}
 				<div className="uk-container">
-					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s">
+					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s uk-flex-between">
 						<div className="item">
 							<div className="single-footer-widget">
 								<div className="logo">
-									<Link to="index.html">
+									<Link to="/">
 										<img src={logo} alt="logo" />
 									</Link>
 								</div>
@@ -44,7 +45,6 @@ export class Footer extends React.Component {
 							<div className="single-footer-widget">
 								<h3>Contact</h3>
 								<div className="bar" />
-
 								<ul className="contact-info">
 									<li>
 										<Link to="#">contact@unitedinternationalservices.com</Link>
@@ -60,7 +60,7 @@ export class Footer extends React.Component {
 									<li>
 										{/* TODO: Get social media links */}
 										<Link to="#">
-											<i className="flaticon-logo" />
+											<i className="flaticon-facebook" />
 										</Link>
 									</li>
 									<li>
