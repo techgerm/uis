@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/official-logo-web-footer.png";
+// import logo from "../../assets/images/official-logo-web-footer.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
@@ -15,9 +15,7 @@ export class Footer extends React.Component {
 						<div className="item">
 							<div className="single-footer-widget">
 								<div className="logo">
-									<Link to="/">
-										<img src={logo} alt="logo" />
-									</Link>
+									<Link to="/">{/* <img src={logo} alt="logo" /> */}</Link>
 								</div>
 								{/* TODO: Add short description */}
 								<p>
