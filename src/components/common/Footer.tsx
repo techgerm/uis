@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/Official-Logo-Web-Footer.png";
+import logo from "../../assets/images/official-logo-web-footer.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
@@ -26,21 +26,6 @@ export class Footer extends React.Component {
 								</p>
 							</div>
 						</div>
-
-						<div className="item">
-							<div className="single-footer-widget">
-								<h3>Los Angeles</h3>
-								<div className="bar" />
-
-								<div className="location">
-									<p>
-										20207 Saticoy Street <br /> Second Floor <br /> Winnetka CA
-										91306 <br /> United States
-									</p>
-								</div>
-							</div>
-						</div>
-
 						<div className="item">
 							<div className="single-footer-widget">
 								<h3>Contact</h3>
@@ -58,16 +43,17 @@ export class Footer extends React.Component {
 								</ul>
 								<ul className="social">
 									<li>
-										{/* TODO: Get social media links */}
+										{/* TODO: Add facebook link */}
 										<Link to="#">
 											<i className="flaticon-facebook" />
 										</Link>
 									</li>
-									<li>
+									{/* TODO: Yelp icon */}
+									{/* <li>
 										<Link to="#">
 											<i className="flaticon-twitter" />
 										</Link>
-									</li>
+									</li> */}
 									<li>
 										<Link to="#">
 											<i className="flaticon-linkedin" />
@@ -79,6 +65,19 @@ export class Footer extends React.Component {
 										</Link>
 									</li>
 								</ul>
+							</div>
+						</div>
+						<div className="item">
+							<div className="single-footer-widget">
+								<h3>Los Angeles</h3>
+								<div className="bar" />
+
+								<div className="location">
+									<p>
+										20207 Saticoy Street <br /> Second Floor <br /> Winnetka CA
+										91306 <br /> United States
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
