@@ -10,7 +10,6 @@ export class Footer extends React.Component {
 	render() {
 		return (
 			<footer className="footer-area uk-dark uk-footer">
-				{/* original: <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s">*/}
 				<div className="uk-container">
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s uk-flex-between">
 						<div className="item">
