@@ -4,7 +4,7 @@ import { SeparatedBar } from "../components/common/SeparatedBar";
 import { About } from "../components/sections/About";
 import { Services } from "../components/sections/Services";
 import { Testimonials } from "../components/sections/Testimonials";
-import { PartnerLogo } from "../components/sections/PartnerLogo";
+// TODO: import { PartnerLogo } from "../components/sections/PartnerLogo";
 // TODO: import { Newsletter } from "../components/sections/Newsletter"; --Implement in phase 2
 // TODO: import { LatestNews } from "../components/sections/LatestNews"; --Implement in phase 2
 import { Contact } from "../components/sections/Contact";
@@ -29,7 +29,7 @@ export class Home extends React.Component {
 				{/* Feedback Area */}
 				<Testimonials />
 				{/* Partner Area */}
-				<PartnerLogo />
+				{/*TODO: Stats bar <PartnerLogo /> */}
 				{/* Subscribe Area */}
 				{/*TODO: <Newsletter /> */}
 				{/* Blog Area */}
