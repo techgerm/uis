@@ -4,6 +4,7 @@ import logo from "../../assets/images/official-logo-web-footer.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
+import { YelpIcon } from "../../assets/icons";
 
 export class Footer extends React.Component {
 	render() {
@@ -48,12 +49,15 @@ export class Footer extends React.Component {
 											<i className="flaticon-facebook" />
 										</Link>
 									</li>
-									{/* TODO: Yelp icon */}
-									{/* <li>
-										<Link to="#">
-											<i className="flaticon-twitter" />
-										</Link>
-									</li> */}
+									<li>
+										<a
+											href="https://www.yelp.com/biz/united-international-services-winnetka-2"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<YelpIcon fill="#999999" width={16} />
+										</a>
+									</li>
 									<li>
 										<Link to="#">
 											<i className="flaticon-linkedin" />
@@ -74,7 +78,7 @@ export class Footer extends React.Component {
 
 								<div className="location">
 									<p>
-										20207 Saticoy Street <br /> Second Floor <br /> Winnetka CA
+										20207 Saticoy Street <br /> Second Floor <br /> Winnetka, CA
 										91306 <br /> United States
 									</p>
 								</div>
