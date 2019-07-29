@@ -16,9 +16,9 @@ export class Footer extends React.Component {
 						<div className="item">
 							<div className="single-footer-widget">
 								<div className="logo">
-									<Link to="/">
+									<a href="/">
 										<img src={logo} alt="logo" />
-									</Link>
+									</a>
 								</div>
 								{/* TODO: Add short description */}
 								<p>
@@ -33,13 +33,17 @@ export class Footer extends React.Component {
 								<div className="bar" />
 								<ul className="contact-info">
 									<li>
-										<Link to="#">contact@unitedinternationalservices.com</Link>
+										<a href="mailto:contact@unitedinternationalservices.com">
+											contact@unitedinternationalservices.com
+										</a>
 									</li>
 									<li>
-										<Link to="#">support@unitedinternationalservices.com</Link>
+										<a href="mailto:support@unitedinternationalservices.com">
+											support@unitedinternationalservices.com
+										</a>
 									</li>
 									<li>
-										<Link to="#">661-993-7968</Link>
+										<a href="tel:+16619937968">661-993-7968</a>
 									</li>
 								</ul>
 								<ul className="social">
