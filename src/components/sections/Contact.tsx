@@ -107,8 +107,8 @@ export class Contact extends React.Component {
 								<div className="location uk-location1">
 									<Link to="#" className="active">
 										<div className="location-info">
-											<h5>New York</h5>
-											<span>198 Collective Street</span>
+											<h5>Los Angeles</h5>
+											<span>20207 Saticoy St</span>
 										</div>
 									</Link>
 								</div>
