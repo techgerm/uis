@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Navigation } from "./navigation/NavBar";
 import { Preloader } from "./components/common/Preloader";
 import { Home } from "./pages/Home";
+import * as firebase from "firebase/app";
 // import ServiceDetails from './components/Pages/ServiceDetails';
 // import ProjectDetails from './components/Pages/ProjectDetails';
 // import BlogDetails from './components/Pages/BlogDetails';
@@ -10,11 +11,24 @@ import { Home } from "./pages/Home";
 
 class App extends React.Component {
 	state = {
-		loading: true
+		loading: true,
+		firebaseConfig: {
+			apiKey: "AIzaSyBx4b4HcAgUHDHLZ1pw9VD_Fh-Kv17c0hU",
+			authDomain: "uis-llc.firebaseapp.com",
+			databaseURL: "https://uis-llc.firebaseio.com",
+			projectId: "uis-llc",
+			storageBucket: "uis-llc.appspot.com",
+			messagingSenderId: "514499994875",
+			appId: "1:514499994875:web:1d34d97fc40fe297"
+		}
 	};
 
 	componentDidMount() {
-		this.demoAsyncCall().then(() => this.setState({ loading: false }));
+		this.demoAsyncCall().then(() => {
+			// TODO: initialize firebase
+			firebase.initializeApp(this.state.firebaseConfig);
+			this.setState({ loading: false });
+		});
 	}
 
 	demoAsyncCall = () => {

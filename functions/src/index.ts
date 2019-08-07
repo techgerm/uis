@@ -1,30 +1,21 @@
 import * as functions from "firebase-functions";
-// import { async } from "q";
-// import * as admin from "firebase-admin";
-// import { user } from "firebase-functions/lib/providers/auth";
+// TODO: incorporate template for email styling
 // import { template } from "@babel/core";
-// import * as sgMail from "@sendgrid/mail";
-// import { EmailAddress } from "@sendgrid/helpers/classes";
+import * as sgMail from "@sendgrid/mail";
 
-// admin.initializeApp(functions.config().firebase);
-// const API_KEY = functions.config().sendgrid.Key;
+const API_KEY = functions.config().sendgrid.key;
+// TODO: incorporate template for email styling
 // const TEMPLATE_ID = functions.config().sendgrid.template;
-// sgMail.setApiKey(API_KEY);
+sgMail.setApiKey(API_KEY);
 
-// export const contact = functions.https.onCall(async (data, context) => {
-// 	const msg = {
-// 		to: "contact@unitedinternationalservices.com",
-// 		from: name,
-// 		email: EmailAddress,
-// 		templateId: TEMPLATE_ID
-// 	};
-// 	return sgMail.send(msg);
-// });
-
-export const Testing = functions.https.onRequest((req, res) => {
-	res.json({ cat: "black" });
-});
-
-export const TestingTwo = functions.https.onCall((data, context) => {
-	return { cat: "meow" };
+export const contact = functions.https.onCall(async (data, context) => {
+	const msg = {
+		to: "contact@unitedinternationalservices.com",
+		from: data.email,
+		phone: data.phone,
+		subject: data.subject,
+		text: data.text
+	};
+	await sgMail.send(msg);
+	return { success: true };
 });

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import mapImg from "../../assets/images/map.png";
+import * as firebase from "firebase/app";
+import "firebase/functions";
 
 export class Contact extends React.Component {
 	state = {
@@ -19,25 +21,24 @@ export class Contact extends React.Component {
 	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		const data = this.state.formFields;
-		fetch("/api/contact", {
-			method: "post",
-			headers: {
-				Accept: "application/json, text/plain, */*",
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify(data)
-		}).then(res => {
-			if (res.status === 200) {
-				this.setState({ submitted: true });
-			}
-			const formFields = Object.assign({}, this.state.formFields);
-			formFields.name = "";
-			formFields.email = "";
-			formFields.phone = "";
-			formFields.subject = "";
-			formFields.text = "";
-			this.setState({ formFields });
-		});
+		const mailSend = firebase.functions().httpsCallable("contact");
+		mailSend(data)
+			.then(res => {
+				// TODO: update or delete
+				// if (res.status === 200) {
+				// 	this.setState({ submitted: true });
+				// }
+				console.log(res);
+				console.log(res.data);
+				const formFields = Object.assign({}, this.state.formFields);
+				formFields.name = "";
+				formFields.email = "";
+				formFields.phone = "";
+				formFields.subject = "";
+				formFields.text = "";
+				this.setState({ formFields });
+			})
+			.catch(error => console.log(error));
 	};
 
 	nameChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
