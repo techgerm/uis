@@ -12,6 +12,7 @@ import * as firebase from "firebase/app";
 class App extends React.Component {
 	state = {
 		loading: true,
+		// TODO: move firebaseConfig
 		firebaseConfig: {
 			apiKey: "AIzaSyBx4b4HcAgUHDHLZ1pw9VD_Fh-Kv17c0hU",
 			authDomain: "uis-llc.firebaseapp.com",
@@ -25,7 +26,7 @@ class App extends React.Component {
 
 	componentDidMount() {
 		this.demoAsyncCall().then(() => {
-			// TODO: initialize firebase
+			// TODO: initialize firebase without using state
 			firebase.initializeApp(this.state.firebaseConfig);
 			this.setState({ loading: false });
 		});

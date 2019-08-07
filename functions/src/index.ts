@@ -8,14 +8,25 @@ const API_KEY = functions.config().sendgrid.key;
 // const TEMPLATE_ID = functions.config().sendgrid.template;
 sgMail.setApiKey(API_KEY);
 
-export const contact = functions.https.onCall(async (data, context) => {
-	const msg = {
-		to: "contact@unitedinternationalservices.com",
+export const contact = functions.https.onCall((data, context) => {
+	const uisNotification = sgMail.send({
+		to: "support@unitedinternationalservices.com",
 		from: data.email,
-		phone: data.phone,
 		subject: data.subject,
-		text: data.text
-	};
-	await sgMail.send(msg);
-	return { success: true };
+		text: `${data.text} ${data.phone}`
+	});
+
+	const clientNotification = sgMail.send({
+		to: data.email,
+		from: "support@unitedinternationalservices.com",
+		subject: "Confirmation",
+		text: "Thank for choosing UIS for your notary needs!"
+	});
+
+	return Promise.all([uisNotification, clientNotification])
+		.then(() => true)
+		.catch(error => {
+			console.log(`ERROR in Promise All: ${error}`);
+			return false;
+		});
 });
