@@ -24,7 +24,6 @@
 		"@types/react": "16.8.17",
 		"@types/react-dom": "16.8.4",
 		"@types/react-router-dom": "^4.3.3",
-		"@types/uikit": "^2.27.7",
 		"firebase": "^6.3.4",
 		"lax.js": "^1.2.3",
 		"node-sass": "^4.12.0",

@@ -23,10 +23,12 @@ export const contact = functions.https.onCall((data, context) => {
 		text: "Thank for choosing UIS for your notary needs!"
 	});
 
-	return Promise.all([uisNotification, clientNotification])
+	Promise.all([uisNotification, clientNotification])
 		.then(() => true)
 		.catch(error => {
-			console.log(`ERROR in Promise All: ${error}`);
-			return false;
+			throw new functions.https.HttpsError(
+				"internal",
+				`ERROR in Promise All: ${error}`
+			);
 		});
 });

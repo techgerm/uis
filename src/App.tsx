@@ -1,39 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
+import * as firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Navigation } from "./navigation/NavBar";
 import { Preloader } from "./components/common/Preloader";
 import { Home } from "./pages/Home";
-import * as firebase from "firebase/app";
+import { firebaseConfig } from "./config";
 // import ServiceDetails from './components/Pages/ServiceDetails';
 // import ProjectDetails from './components/Pages/ProjectDetails';
 // import BlogDetails from './components/Pages/BlogDetails';
 // import Blog from './components/Pages/Blog';
 
-class App extends React.Component {
+export class App extends Component {
 	state = {
-		loading: true,
-		// TODO: move firebaseConfig
-		firebaseConfig: {
-			apiKey: "AIzaSyBx4b4HcAgUHDHLZ1pw9VD_Fh-Kv17c0hU",
-			authDomain: "uis-llc.firebaseapp.com",
-			databaseURL: "https://uis-llc.firebaseio.com",
-			projectId: "uis-llc",
-			storageBucket: "uis-llc.appspot.com",
-			messagingSenderId: "514499994875",
-			appId: "1:514499994875:web:1d34d97fc40fe297"
-		}
+		loading: true
 	};
 
 	componentDidMount() {
-		this.demoAsyncCall().then(() => {
-			// TODO: initialize firebase without using state
-			firebase.initializeApp(this.state.firebaseConfig);
+		this.initializeAsyncCall().then(() => {
 			this.setState({ loading: false });
 		});
 	}
 
-	demoAsyncCall = () => {
-		return new Promise(resolve => setTimeout(() => resolve(), 2000));
+	initializeAsyncCall = () => {
+		return new Promise(resolve => {
+			firebase.initializeApp(firebaseConfig);
+			// additional wait for aesthetic purposes
+			setTimeout(() => resolve(), 2000);
+		});
 	};
 
 	renderNavBar = () => {
@@ -56,5 +49,3 @@ class App extends React.Component {
 		);
 	}
 }
-
-export default App;

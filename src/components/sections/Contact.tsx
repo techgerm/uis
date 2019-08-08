@@ -1,14 +1,40 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { renderToString } from "react-dom/server";
 import mapImg from "../../assets/images/map.png";
+import * as UIkit from "uikit";
 import * as firebase from "firebase/app";
+// import { firebaseConfig } from "../../config";
 import "firebase/functions";
 
-export class Contact extends React.Component {
-	state = {
+interface Location {
+	left: number;
+	top: number;
+}
+
+interface ContactFormFields {
+	name: string;
+	email: string;
+	subject: string;
+	phone: string;
+	text: string;
+}
+
+interface ContactState {
+	submitting: boolean;
+	buttonState: string;
+	formFields: ContactFormFields;
+	spinnerLocation: Location;
+}
+
+export class Contact extends Component<any, ContactState> {
+	state: ContactState = {
 		submitting: false,
-		submitted: false,
 		buttonState: "",
+		spinnerLocation: {
+			left: 0,
+			top: 0
+		},
 		formFields: {
 			name: "",
 			email: "",
@@ -18,79 +44,83 @@ export class Contact extends React.Component {
 		}
 	};
 
-	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		const data = this.state.formFields;
-		const mailSend = firebase.functions().httpsCallable("contact");
-		mailSend(data)
-			.then(res => {
-				// TODO: update or delete
-				// if (res.status === 200) {
-				// 	this.setState({ submitted: true });
-				// }
-				console.log(res);
-				console.log(res.data);
-				const formFields = Object.assign({}, this.state.formFields);
-				formFields.name = "";
-				formFields.email = "";
-				formFields.phone = "";
-				formFields.subject = "";
-				formFields.text = "";
-				this.setState({ formFields });
-			})
-			.catch(error => console.log(error));
-	};
-
-	nameChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const formFields = Object.assign({}, this.state.formFields);
-		formFields.name = e.target.value;
-		this.setState({ formFields });
-	};
-
-	emailChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const formFields = Object.assign({}, this.state.formFields);
-		formFields.email = e.target.value;
-		this.setState({ formFields });
-	};
-
-	phoneChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const formFields = Object.assign({}, this.state.formFields);
-		formFields.phone = e.target.value;
-		this.setState({ formFields });
-	};
-
-	subjectChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const formFields = Object.assign({}, this.state.formFields);
-		formFields.subject = e.target.value;
-		this.setState({ formFields });
-	};
-
-	textChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		const formFields = Object.assign({}, this.state.formFields);
-		formFields.text = e.target.value;
-		this.setState({ formFields });
-	};
-
-	onHideSuccess = () => {
-		this.setState({ submitted: false });
-	};
-
-	successMessage = () => {
-		if (this.state.submitted) {
-			return (
-				<div className="alert-success" uk-alert-success>
-					<Link
-						to="#"
-						onClick={this.onHideSuccess}
-						className="uk-alert-close"
-						uk-close="true"
+	renderContactForm = () => (
+		<form id="contactForm" onSubmit={this.onSubmit}>
+			<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
+				<div className="item uk-margin">
+					<input
+						type="text"
+						className="uk-input"
+						name="name"
+						id="name"
+						placeholder="Name"
+						value={this.state.formFields.name}
+						onChange={this.nameChangeHandler}
+						disabled={this.state.submitting}
+						required={true}
 					/>
-					<h3>Thank you</h3>
-					<p>We will connect you soon.</p>
 				</div>
-			);
-		}
-	};
+				<div className="item uk-margin">
+					<input
+						type="email"
+						className="uk-input"
+						name="email"
+						id="email"
+						placeholder="Email"
+						value={this.state.formFields.email}
+						onChange={this.emailChangeHandler}
+						disabled={this.state.submitting}
+						required={true}
+					/>
+				</div>
+				<div className="item uk-margin">
+					<input
+						type="text"
+						className="uk-input"
+						placeholder="Phone"
+						value={this.state.formFields.phone}
+						onChange={this.phoneChangeHandler}
+						disabled={this.state.submitting}
+						required={true}
+					/>
+				</div>
+				<div className="item uk-margin">
+					<input
+						type="text"
+						className="uk-input"
+						name="subject"
+						id="subject"
+						placeholder="Subject"
+						value={this.state.formFields.subject}
+						onChange={this.subjectChangeHandler}
+						disabled={this.state.submitting}
+						required={true}
+					/>
+				</div>
+			</div>
+			<div className="item">
+				<textarea
+					name="message"
+					className="uk-textarea"
+					id="message"
+					cols={30}
+					rows={4}
+					placeholder="Your Message"
+					value={this.state.formFields.text}
+					onChange={this.textChangeHandler}
+					disabled={this.state.submitting}
+					required={true}
+				/>
+			</div>
+			<button
+				type="submit"
+				className="uk-button uk-button-default"
+				disabled={this.state.submitting}
+			>
+				Submit Message
+			</button>
+		</form>
+	);
 
 	render() {
 		return (
@@ -100,7 +130,6 @@ export class Contact extends React.Component {
 						<span>Let's Talk</span>
 						<h2>Get in Touch</h2>
 					</div>
-
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
 						<div className="item">
 							<div className="map-img">
@@ -115,84 +144,120 @@ export class Contact extends React.Component {
 								</div>
 							</div>
 						</div>
-
 						<div className="item">
-							<form id="contactForm" onSubmit={this.onSubmit}>
-								<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
-									<div className="item uk-margin">
-										<input
-											type="text"
-											className="uk-input"
-											name="name"
-											id="name"
-											placeholder="Name"
-											value={this.state.formFields.name}
-											onChange={this.nameChangeHandler}
-											required={true}
-										/>
-									</div>
-
-									<div className="item uk-margin">
-										<input
-											type="email"
-											className="uk-input"
-											name="email"
-											id="email"
-											placeholder="Email"
-											value={this.state.formFields.email}
-											onChange={this.emailChangeHandler}
-											required={true}
-										/>
-									</div>
-
-									<div className="item uk-margin">
-										<input
-											type="text"
-											className="uk-input"
-											placeholder="Phone"
-											value={this.state.formFields.phone}
-											onChange={this.phoneChangeHandler}
-											required={true}
-										/>
-									</div>
-
-									<div className="item uk-margin">
-										<input
-											type="text"
-											className="uk-input"
-											name="subject"
-											id="subject"
-											placeholder="Subject"
-											value={this.state.formFields.subject}
-											onChange={this.subjectChangeHandler}
-											required={true}
-										/>
-									</div>
-								</div>
-
-								<div className="item">
-									<textarea
-										name="message"
-										className="uk-textarea"
-										id="message"
-										cols={30}
-										rows={4}
-										placeholder="Your Message"
-										value={this.state.formFields.text}
-										onChange={this.textChangeHandler}
-										required={true}
-									/>
-								</div>
-
-								<button type="submit" className="uk-button uk-button-default">
-									Submit Message
-								</button>
-							</form>
-							{this.successMessage()}
+							{this.state.submitting ? (
+								<div
+									className="spinner"
+									uk-spinner="ratio: 2"
+									style={{
+										position: "absolute",
+										maxWidth: 100,
+										left: this.state.spinnerLocation.left,
+										top: this.state.spinnerLocation.top
+									}}
+								></div>
+							) : (
+								""
+							)}
+							{this.renderContactForm()}
 						</div>
 					</div>
 				</div>
 			</section>
 		);
 	}
+
+	private onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		this.setSpinnerLocation();
+		this.setState({ submitting: true });
+
+		e.preventDefault();
+		const data = this.state.formFields;
+		const mailSend = firebase.functions().httpsCallable("contact");
+		mailSend(data)
+			.then(() => {
+				const formFields = Object.assign({}, this.state.formFields);
+				formFields.name = "";
+				formFields.email = "";
+				formFields.phone = "";
+				formFields.subject = "";
+				formFields.text = "";
+				this.setState({ formFields, submitting: false });
+				this.showResponseMessage(true);
+			})
+			.catch(error => {
+				this.setState({ submitting: false });
+				this.showResponseMessage(false);
+				console.log(error);
+			});
+	};
+
+	private showResponseMessage = (success: boolean) => {
+		const message = (
+			<div>
+				<span
+					uk-icon={success ? "icon: check" : "icon: warning"}
+					style={{ paddingRight: 10 }}
+				></span>
+				{success ? (
+					"Your message was sent!"
+				) : (
+					<span>
+						Failure to send!
+						<br />
+						Please call us at the number listed below.
+					</span>
+				)}
+			</div>
+		);
+
+		UIkit.notification({
+			message: renderToString(message),
+			status: success ? "primary" : "danger",
+			pos: "bottom-center",
+			timeout: 5000
+		});
+	};
+
+	private setSpinnerLocation = () => {
+		const e: HTMLElement | null = document.getElementById("contactForm");
+		if (e != null) {
+			this.setState({
+				spinnerLocation: {
+					left: e.offsetLeft - 30 + e.offsetWidth / 2,
+					top: e.offsetTop - 55 + e.offsetHeight / 2
+				}
+			});
+		}
+	};
+
+	private nameChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const formFields = Object.assign({}, this.state.formFields);
+		formFields.name = e.target.value;
+		this.setState({ formFields });
+	};
+
+	private emailChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const formFields = Object.assign({}, this.state.formFields);
+		formFields.email = e.target.value;
+		this.setState({ formFields });
+	};
+
+	private phoneChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const formFields = Object.assign({}, this.state.formFields);
+		formFields.phone = e.target.value;
+		this.setState({ formFields });
+	};
+
+	private subjectChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const formFields = Object.assign({}, this.state.formFields);
+		formFields.subject = e.target.value;
+		this.setState({ formFields });
+	};
+
+	private textChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+		const formFields = Object.assign({}, this.state.formFields);
+		formFields.text = e.target.value;
+		this.setState({ formFields });
+	};
 }
