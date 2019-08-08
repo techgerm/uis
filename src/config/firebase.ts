@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-	apiKey: "AIzaSyBx4b4HcAgUHDHLZ1pw9VD_Fh-Kv17c0hU",
-	authDomain: "uis-llc.firebaseapp.com",
-	databaseURL: "https://uis-llc.firebaseio.com",
-	projectId: "uis-llc",
-	storageBucket: "uis-llc.appspot.com",
-	messagingSenderId: "514499994875",
-	appId: "1:514499994875:web:1d34d97fc40fe297"
+	apiKey: process.env.REACT_APP_apiKey,
+	authDomain: process.env.REACT_APP_authDomain,
+	databaseURL: process.env.REACT_APP_databaseURL,
+	projectId: process.env.REACT_APP_projectId,
+	storageBucket: process.env.REACT_APP_storageBucket,
+	messagingSenderId: process.env.REACT_APP_messagingSenderId,
+	appId: process.env.REACT_APP_appId
 };
