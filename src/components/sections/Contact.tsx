@@ -4,7 +4,6 @@ import { renderToString } from "react-dom/server";
 import mapImg from "../../assets/images/map.png";
 import * as UIkit from "uikit";
 import * as firebase from "firebase/app";
-// import { firebaseConfig } from "../../config";
 import "firebase/functions";
 
 interface Location {
@@ -44,7 +43,52 @@ export class Contact extends Component<any, ContactState> {
 		}
 	};
 
-	renderContactForm = () => (
+	render() {
+		return (
+			<section id="contact" className="contact-area uk-contact uk-section">
+				<div className="uk-container">
+					<div className="uk-section-title section-title">
+						<span>Let's Talk</span>
+						<h2>Get in Touch</h2>
+					</div>
+					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
+						<div className="item">
+							<div className="map-img">
+								<img src={mapImg} alt="map" />
+								<div className="location uk-location1">
+									<Link to="#" className="active">
+										<div className="location-info">
+											<h5>Los Angeles</h5>
+											<span>20207 Saticoy St</span>
+										</div>
+									</Link>
+								</div>
+							</div>
+						</div>
+						<div className="item">
+							{this.state.submitting ? (
+								<div
+									className="spinner"
+									uk-spinner="ratio: 2"
+									style={{
+										position: "absolute",
+										maxWidth: 100,
+										left: this.state.spinnerLocation.left,
+										top: this.state.spinnerLocation.top
+									}}
+								></div>
+							) : (
+								""
+							)}
+							{this.renderContactForm()}
+						</div>
+					</div>
+				</div>
+			</section>
+		);
+	}
+
+	private renderContactForm = () => (
 		<form id="contactForm" onSubmit={this.onSubmit}>
 			<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
 				<div className="item uk-margin">
@@ -121,51 +165,6 @@ export class Contact extends Component<any, ContactState> {
 			</button>
 		</form>
 	);
-
-	render() {
-		return (
-			<section id="contact" className="contact-area uk-contact uk-section">
-				<div className="uk-container">
-					<div className="uk-section-title section-title">
-						<span>Let's Talk</span>
-						<h2>Get in Touch</h2>
-					</div>
-					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
-						<div className="item">
-							<div className="map-img">
-								<img src={mapImg} alt="map" />
-								<div className="location uk-location1">
-									<Link to="#" className="active">
-										<div className="location-info">
-											<h5>Los Angeles</h5>
-											<span>20207 Saticoy St</span>
-										</div>
-									</Link>
-								</div>
-							</div>
-						</div>
-						<div className="item">
-							{this.state.submitting ? (
-								<div
-									className="spinner"
-									uk-spinner="ratio: 2"
-									style={{
-										position: "absolute",
-										maxWidth: 100,
-										left: this.state.spinnerLocation.left,
-										top: this.state.spinnerLocation.top
-									}}
-								></div>
-							) : (
-								""
-							)}
-							{this.renderContactForm()}
-						</div>
-					</div>
-				</div>
-			</section>
-		);
-	}
 
 	private onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		this.setSpinnerLocation();
