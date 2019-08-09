@@ -1,24 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
+import * as firebase from "firebase/app";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Navigation } from "./navigation/NavBar";
 import { Preloader } from "./components/common/Preloader";
 import { Home } from "./pages/Home";
+import { firebaseConfig } from "./config";
 // import ServiceDetails from './components/Pages/ServiceDetails';
 // import ProjectDetails from './components/Pages/ProjectDetails';
 // import BlogDetails from './components/Pages/BlogDetails';
 // import Blog from './components/Pages/Blog';
 
-class App extends React.Component {
+export class App extends Component {
 	state = {
 		loading: true
 	};
 
 	componentDidMount() {
-		this.demoAsyncCall().then(() => this.setState({ loading: false }));
+		this.initializeAsyncCall().then(() => {
+			this.setState({ loading: false });
+		});
 	}
 
-	demoAsyncCall = () => {
-		return new Promise(resolve => setTimeout(() => resolve(), 2000));
+	initializeAsyncCall = () => {
+		return new Promise(resolve => {
+			firebase.initializeApp(firebaseConfig);
+			// additional wait for aesthetic purposes
+			setTimeout(() => resolve(), 2000);
+		});
 	};
 
 	renderNavBar = () => {
@@ -41,5 +49,3 @@ class App extends React.Component {
 		);
 	}
 }
-
-export default App;

@@ -32,8 +32,8 @@ export class Footer extends React.Component {
 								<div className="bar" />
 								<ul className="contact-info">
 									<li>
-										<a href="mailto:contact@unitedinternationalservices.com">
-											contact@unitedinternationalservices.com
+										<a href="mailto:hello@unitedinternationalservices.com">
+											hello@unitedinternationalservices.com
 										</a>
 									</li>
 									<li>
