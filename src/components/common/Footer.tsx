@@ -4,7 +4,7 @@ import logo from "../../assets/images/official-logo-web-footer.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import { GoTop } from "./GoTop";
-import { YelpIcon } from "../../assets/icons";
+import { YelpIcon, GoogleIcon } from "../../assets/icons";
 
 export class Footer extends React.Component {
 	render() {
@@ -32,25 +32,28 @@ export class Footer extends React.Component {
 								<div className="bar" />
 								<ul className="contact-info">
 									<li>
+										<a href="tel:+16619937968">661-993-7968</a>
+									</li>
+									<li>
 										<a href="mailto:hello@unitedinternationalservices.com">
 											hello@unitedinternationalservices.com
 										</a>
 									</li>
-									<li>
-										<a href="mailto:support@unitedinternationalservices.com">
-											support@unitedinternationalservices.com
-										</a>
-									</li>
-									<li>
-										<a href="tel:+16619937968">661-993-7968</a>
-									</li>
 								</ul>
 								<ul className="social">
-									<li>
-										{/* TODO: Add facebook link */}
+									{/* <li>
 										<Link to="#">
 											<i className="flaticon-facebook" />
 										</Link>
+									</li> */}
+									<li>
+										<a
+											href="https://www.google.com/search?source=hp&ei=DXJtXfurL87Q-gTdko5g&q=united%20international%20services&oq=united+in&gs_l=psy-ab.3.0.35i39l2j0i131j0l7.1979.3128..3914...0.0..1.209.808.8j0j1......0....1..gws-wiz.......0i10.GULLZ1fClwg&npsic=0&rflfq=1&rlha=0&rllag=34115286,-118427551,16973&tbm=lcl&rldimm=12534831510451803968&lqi=Ch11bml0ZWQgaW50ZXJuYXRpb25hbCBzZXJ2aWNlc1ohCgAiHXVuaXRlZCBpbnRlcm5hdGlvbmFsIHNlcnZpY2Vz&ved=2ahUKEwiN-t2O9LLkAhWXu54KHettAHoQvS4wAHoECAsQJw&rldoc=1&tbs=lrf:!2m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:2#rlfi=hd:;si:12534831510451803968,l,Ch11bml0ZWQgaW50ZXJuYXRpb25hbCBzZXJ2aWNlc1ohCgAiHXVuaXRlZCBpbnRlcm5hdGlvbmFsIHNlcnZpY2Vz;mv:!1m2!1d34.27158578084741!2d-118.33572380478182!2m2!1d34.03520454047421!2d-118.84487144882479!4m2!1d34.15347786097811!2d-118.5902976268033!5i12"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											<GoogleIcon fill="#999999" width={16} />
+										</a>
 									</li>
 									<li>
 										<a
@@ -61,16 +64,17 @@ export class Footer extends React.Component {
 											<YelpIcon fill="#999999" width={16} />
 										</a>
 									</li>
-									<li>
+									{/* <li>
 										<Link to="#">
 											<i className="flaticon-linkedin" />
 										</Link>
-									</li>
-									<li>
+									</li> */}
+									{/* Instagram */}
+									{/* <li>
 										<Link to="#">
 											<i className="flaticon-logo-1" />
 										</Link>
-									</li>
+									</li> */}
 								</ul>
 							</div>
 						</div>
@@ -82,7 +86,7 @@ export class Footer extends React.Component {
 								<div className="location">
 									<p>
 										20207 Saticoy Street <br /> Second Floor <br /> Winnetka, CA
-										91306 <br /> United States
+										91306 <br />
 									</p>
 								</div>
 							</div>
