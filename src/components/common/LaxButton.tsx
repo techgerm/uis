@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import lax from "lax.js";
-import { Link } from "react-router-dom";
 
-export class LaxButton extends React.Component {
+type Direction = "Right" | "Left";
+
+interface LaxProps {
+	text: string;
+	link: string;
+	driftDirection: Direction;
+	style: React.CSSProperties;
+}
+
+export class LaxButton extends React.Component<LaxProps> {
 	el: Element | Text | null | undefined;
 
 	componentDidMount() {
@@ -17,13 +25,14 @@ export class LaxButton extends React.Component {
 
 	render() {
 		return (
-			<Link
-				to="#"
+			<a
+				href={this.props.link}
 				className="uk-button uk-button-default lax"
-				data-lax-preset="driftLeft"
+				data-lax-preset={`drift${this.props.driftDirection}`}
+				style={this.props.style}
 			>
-				More About Us <i className="flaticon-right" />
-			</Link>
+				{this.props.text}
+			</a>
 		);
 	}
 }

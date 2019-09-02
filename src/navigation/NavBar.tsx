@@ -128,7 +128,8 @@ export class Navigation extends React.Component {
 									</ul>
 								</nav>
 
-								<div className="lang">
+								{/* TODO: Spanish support */}
+								{/* <div className="lang">
 									<form>
 										<div>
 											<select>
@@ -137,7 +138,7 @@ export class Navigation extends React.Component {
 											</select>
 										</div>
 									</form>
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</div>

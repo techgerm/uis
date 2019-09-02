@@ -3,7 +3,6 @@ import lax from "lax.js";
 import about1 from "../../assets/images/about1.jpg";
 import about2 from "../../assets/images/about2.jpg";
 import one from "../../assets/images/blue-circle.png";
-import { LaxButton } from "../common/LaxButton";
 
 interface AboutState {
 	hablamosLeftOffset: number;
@@ -97,8 +96,6 @@ export class About extends React.Component<any, AboutState> {
 								<img src={about1} className="about-img1" alt="about-img" />
 								<img src={about2} className="about-img2" alt="about-img" />
 								<img src={one} className="shape-img" alt="shape" />
-
-								<LaxButton />
 							</div>
 						</div>
 					</div>

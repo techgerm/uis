@@ -325,10 +325,12 @@ $font-size: 14px;
 
 	.map-img {
 		margin: {
-			bottom: 0 !important;
-			top: 75px;
+			bottom: 20px !important;
+			top: 10px;
 		}
 		.location {
+			top: 80%;
+			left: 80%;
 			a {
 				.location-info {
 					left: -58px;
