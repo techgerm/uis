@@ -11,7 +11,7 @@
 		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
 		"clean": "rm -rf node_modules/",
 		"preversion": "npm run build && CI=true npm test && npm run lint",
-		"version": "npm run format && git add --all && firebase deploy",
+		"version": "npm run format && git add --all && firebase deploy --only hosting",
 		"postversion": "git push && git push --tags"
 	},
 	"eslintConfig": {
