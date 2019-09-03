@@ -12,14 +12,17 @@ export class Services extends Component {
 						<div className="bar" />
 					</div>
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s">
-						<Item title="Affidavits" iconName="flaticon-plan" />
-						<Item title="Business Contracts" iconName="flaticon-think" />
-						<Item title="Power of Attorney" iconName="flaticon-shout" />
-						<Item title="Apostilles" iconName="flaticon-analytics-1" />
+						<Item title="Affidavits" iconName="flaticon-search-engine" />
+						<Item title="Business Contracts" iconName="flaticon-link" />
+						<Item title="Power of Attorney" iconName="flaticon-think" />
+						<Item title="Apostilles" iconName="flaticon-tick" />
 						<Item title="Live Scan" iconName="flaticon-ux-design" />
-						<Item title="Document Translations" iconName="flaticon-camera" />
-						<Item title="Wills and Living Trusts" iconName="flaticon-project" />
-						<Item title="Colombian Legal Services" iconName="flaticon-chat" />
+						<Item title="Document Translations" iconName="flaticon-chat" />
+						<Item title="Wills and Living Trusts" iconName="flaticon-edit" />
+						<Item
+							title="Colombian Legal Services"
+							iconName="flaticon-translation"
+						/>
 					</div>
 				</div>
 			</section>
