@@ -19,10 +19,9 @@ export class Footer extends React.Component {
 										<img src={logo} alt="logo" />
 									</a>
 								</div>
-								{/* TODO: Add short description */}
 								<p>
-									Lorem ipsum dolor consectetur adipiscing elit, eiusmod tempor
-									ut labore et dolore magna aliqua.
+									Stop by our office for a FREE consultation or give us a call
+									and we'll come to you!
 								</p>
 							</div>
 						</div>
