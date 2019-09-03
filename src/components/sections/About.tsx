@@ -65,15 +65,15 @@ export class About extends React.Component<any, AboutState> {
 									</div>
 									<h3>Proudly serving the Los Angeles Area</h3>
 									<p>
-										We provide marketing services to startups and small
-										businesses to looking for a partner of their digital media,
-										design & development, lead generation and communications
-										requirements. We work with you, not for you. Although we
-										have a great resources.
-									</p>
-									<p>
-										We are an experienced and talented team of passionate
-										consultants who live and breathe search engine marketing.
+										United International Services was founded by Edelmira Pineda
+										with one goal in mind - to serve the Los Angeles community
+										with the utmost professionalism and transparency. Edelmira’s
+										experience spans across 20+ years as a lawyer in Bogotá,
+										Colombia where she owned and ran her legal practice and
+										participated in high-profile cases throughout the country.
+										Now in Los Angeles, Edelmira is continuing to help members
+										of her community by offering 10+ services on-the-go any
+										time, any place.
 									</p>
 								</div>
 								<div id="hablamos-espanol-container">

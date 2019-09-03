@@ -22,18 +22,18 @@ export class Banner extends React.Component {
 							<div className="uk-container">
 								<div className="main-banner-content">
 									<h1>
-										Quality service <br /> Any time, any place
+										Quality Service <br /> Any time, Any place
 									</h1>
 									<p>
 										We are a {this.boldText("mobile-first")} business that takes
 										great pride in offering top-quality notary, live scan
 										fingerprint, apostille, paralegal and translation services
-										in over 7+ languages with honesty and transparency as the
-										core principles of our business.
+										in 7+ languages with honesty and transparency as the core
+										principles of our business.
 									</p>
 									<p>
-										Stop by our office for a {this.boldText("FREE")}{" "}
-										consultation or give us a call and we'll come to you!
+										Give us a call and we'll come to you or stop by our office
+										for a {this.boldText("FREE")} consultation!
 									</p>
 								</div>
 							</div>
