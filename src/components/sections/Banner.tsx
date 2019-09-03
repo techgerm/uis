@@ -9,6 +9,10 @@ export class Banner extends React.Component {
 		this.setState({ isOpen: true });
 	};
 
+	boldText = (text: string) => (
+		<span style={{ fontWeight: "bold" }}>{text}</span>
+	);
+
 	render() {
 		return (
 			<div>
@@ -18,13 +22,18 @@ export class Banner extends React.Component {
 							<div className="uk-container">
 								<div className="main-banner-content">
 									<h1>
-										Some awesome <br /> Tag line
+										Quality service <br /> Any time, any place
 									</h1>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor incididunt ut labore et dolore magna
-										aliqua. Risus commodo viverra maecenas accumsan lacus vel
-										facilisis.
+										We are a {this.boldText("mobile-first")} business that takes
+										great pride in offering top-quality notary, live scan
+										fingerprint, apostille, paralegal and translation services
+										in over 7+ languages with honesty and transparency as the
+										core principles of our business.
+									</p>
+									<p>
+										Stop by our office for a {this.boldText("FREE")}{" "}
+										consultation or give us a call and we'll come to you!
 									</p>
 								</div>
 							</div>
