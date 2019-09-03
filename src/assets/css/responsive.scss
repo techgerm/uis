@@ -1,6 +1,7 @@
 $media: screen;
 $feature_min: min-width;
 $feature_max: max-width;
+$value_sm: 460px;
 $value_one: 767px;
 $value_two: 768px;
 $value_three: 991px;
@@ -16,6 +17,17 @@ $black-color: #000000;
 $sub-black-color: #111111;
 $transition: 0.5s;
 $font-size: 14px;
+
+@media only #{$media} and ($feature_max : $value_sm) {
+	.main-logo {
+		background-size: auto 55% !important;
+	}
+	.main-banner {
+		padding: {
+			bottom: 300px !important;
+		}
+	}
+}
 
 @media only #{$media} and ($feature_max : $value_one) {
 	body {
