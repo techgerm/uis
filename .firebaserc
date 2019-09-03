@@ -1,6 +1,5 @@
 {
   "projects": {
-    "production": "uis-llc",
-    "default": "uis-llc"
+    "production": "uis-llc"
   }
 }
