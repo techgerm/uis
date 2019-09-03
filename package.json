@@ -4,8 +4,9 @@
 	"private": true,
 	"homepage": "https://unitedinternationalservices.com",
 	"scripts": {
+		"type-check": "tsc --noEmit",
 		"start": "react-scripts start",
-		"build": "node-sass src/ -o src/ --source-map true && react-scripts build",
+		"build": "npm run type-check && node-sass src/ -o src/ --source-map true && react-scripts build",
 		"lint": "tslint -p tsconfig.json",
 		"test": "react-scripts test",
 		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
@@ -58,7 +59,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run build && npm run lint && pretty-quick --staged"
+			"pre-commit": "npm run type-check && npm run lint && pretty-quick --staged"
 		}
 	}
 }
