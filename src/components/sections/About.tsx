@@ -1,6 +1,6 @@
 import React from "react";
 import lax from "lax.js";
-import { losAngeles, freeways, blueCircle } from "../../assets/images";
+import { losAngeles, edePortrait, blueCircle } from "../../assets/images";
 
 interface AboutState {
 	hablamosLeftOffset: number;
@@ -96,7 +96,7 @@ export class About extends React.Component<any, AboutState> {
 									className="about-img1"
 									alt="Los Angeles"
 								/>
-								<img src={freeways} className="about-img2" alt="Portrait" />
+								<img src={edePortrait} className="about-img2" alt="Portrait" />
 								<img src={blueCircle} className="shape-img" alt="Blue Shape" />
 							</div>
 						</div>

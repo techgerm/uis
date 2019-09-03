@@ -868,14 +868,6 @@ $font-size: 14px;
 	}
 }
 
-@media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_five) {
-	.about-img {
-		.shape-img {
-			left: 40% !important;
-		}
-	}
-}
-
 @media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_six) {
 	.about-img {
 		position: relative;

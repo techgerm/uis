@@ -863,15 +863,16 @@ About CSS
 	}
 	.about-img2 {
 		position: absolute;
-		max-width: 275px !important;
+		max-width: 300px !important;
 		left: -25px !important;
-		top: 200px !important;
+		top: 100px !important;
 	}
 	.shape-img {
 		position: absolute;
 		animation: moveleftbounce 2s linear infinite;
-		left: 70% !important;
-		top: -50px !important;
+		left: 28% !important;
+		top: 125px !important;
+		max-width: 100px;
 	}
 	.uk-button {
 		background-color: $main-color;
