@@ -135,8 +135,9 @@ a {
 }
 /*uk-default-btn*/
 .uk-button-default {
-	border: 2px solid $main-color;
+	border: 3px solid $main-color;
 	color: $black-color;
+	border-radius: 10px;
 
 	&:hover,
 	&:focus {
@@ -461,7 +462,8 @@ Header CSS
 	}
 }
 .uk-button-default {
-	border: 2px solid $main-color;
+	border: 3px solid $main-color;
+	border-radius: 10px;
 	background-color: $main-color;
 	color: $white-color;
 

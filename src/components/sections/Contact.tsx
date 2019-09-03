@@ -61,7 +61,6 @@ export class Contact extends Component<any, ContactState> {
 								>
 									<a
 										className="uk-button uk-button-default"
-										style={{ borderRadius: 10 }}
 										href="tel:+16619937968"
 									>
 										Mobile: (661) 993-7851
@@ -191,7 +190,6 @@ export class Contact extends Component<any, ContactState> {
 				type="submit"
 				className="uk-button uk-button-default"
 				disabled={this.state.submitting}
-				style={{ borderRadius: 10 }}
 			>
 				Submit Message
 			</button>
