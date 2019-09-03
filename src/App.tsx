@@ -24,8 +24,7 @@ export class App extends Component {
 	initializeAsyncCall = () => {
 		return new Promise(resolve => {
 			firebase.initializeApp(firebaseConfig);
-			// additional wait for aesthetic purposes
-			setTimeout(() => resolve(), 1000);
+			resolve();
 		});
 	};
 
