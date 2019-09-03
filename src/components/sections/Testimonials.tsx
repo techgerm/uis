@@ -62,45 +62,21 @@ export class Testimonials extends React.Component {
 									<div className="single-feedback">
 										<i className="flaticon-quote" />
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut labore et dolore magna
-											aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-											commodo viverra maecenas accumsan lacus vel facilisis.
+											All I can say is THANK YOU to Edelmira for her wonderful
+											service. My parents (who don't speak Spanish) were looking
+											for a professional Notary service in the Los Angeles area
+											and luckily, Edelmira drove all the way to my parent's
+											home (20+ miles) and within the hour, finished the job.
+											Not only is she bilingual and was able to speak directly
+											to my parents, she also did an excellent job explaining
+											the entire process to them and ensured every piece of
+											information made sense and was accurate. I highly
+											recommend her services.
 										</p>
 
 										<div className="client">
-											<h3>Jason Statham</h3>
-											<span>Founder at Envato</span>
-										</div>
-									</div>
-
-									<div className="single-feedback">
-										<i className="flaticon-quote" />
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut labore et dolore magna
-											aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-											commodo viverra maecenas accumsan lacus vel facilisis.
-										</p>
-
-										<div className="client">
-											<h3>Jason Statham</h3>
-											<span>Founder at Envato</span>
-										</div>
-									</div>
-
-									<div className="single-feedback">
-										<i className="flaticon-quote" />
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut labore et dolore magna
-											aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-											commodo viverra maecenas accumsan lacus vel facilisis.
-										</p>
-
-										<div className="client">
-											<h3>Jason Statham</h3>
-											<span>Founder at Envato</span>
+											<h3>Isabel G.</h3>
+											<span>CHP Officer</span>
 										</div>
 									</div>
 								</OwlCarousel>
