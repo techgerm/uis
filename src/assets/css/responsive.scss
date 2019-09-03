@@ -5,7 +5,7 @@ $value_one: 767px;
 $value_two: 768px;
 $value_three: 991px;
 $value_four: 992px;
-$value_five: 1199px;
+$value_five: 1400px;
 $value_six: 1650px;
 
 $main-color: #0099ff;
@@ -704,6 +704,7 @@ $font-size: 14px;
 		text-align: center;
 		margin-top: 30px;
 
+		.shape-img,
 		.about-img2 {
 			display: none;
 		}
@@ -868,6 +869,14 @@ $font-size: 14px;
 }
 
 @media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_five) {
+	.about-img {
+		.shape-img {
+			left: 40% !important;
+		}
+	}
+}
+
+@media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_six) {
 	.about-img {
 		position: relative;
 		top: 0;

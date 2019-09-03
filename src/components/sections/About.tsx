@@ -1,8 +1,6 @@
 import React from "react";
 import lax from "lax.js";
-import about1 from "../../assets/images/about1.jpg";
-import about2 from "../../assets/images/about2.jpg";
-import one from "../../assets/images/blue-circle.png";
+import { losAngeles, freeways, blueCircle } from "../../assets/images";
 
 interface AboutState {
 	hablamosLeftOffset: number;
@@ -57,7 +55,7 @@ export class About extends React.Component<any, AboutState> {
 							<div className="about-content">
 								<div className="uk-section-title section-title">
 									<span>About Us</span>
-									<h2>Leading the way in Creative Digital Agency</h2>
+									<h2>Leading the way in Mobile Services</h2>
 									<div className="bar" />
 								</div>
 
@@ -65,7 +63,7 @@ export class About extends React.Component<any, AboutState> {
 									<div className="icon">
 										<i className="flaticon-quality" />
 									</div>
-									<h3>Best Digital Agency in the World</h3>
+									<h3>Proudly serving the Los Angeles Area</h3>
 									<p>
 										We provide marketing services to startups and small
 										businesses to looking for a partner of their digital media,
@@ -93,9 +91,13 @@ export class About extends React.Component<any, AboutState> {
 
 						<div className="item">
 							<div className="about-img">
-								<img src={about1} className="about-img1" alt="about-img" />
-								<img src={about2} className="about-img2" alt="about-img" />
-								<img src={one} className="shape-img" alt="shape" />
+								<img
+									src={losAngeles}
+									className="about-img1"
+									alt="Los Angeles"
+								/>
+								<img src={freeways} className="about-img2" alt="Portrait" />
+								<img src={blueCircle} className="shape-img" alt="Blue Shape" />
 							</div>
 						</div>
 					</div>

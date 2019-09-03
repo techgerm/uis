@@ -859,18 +859,19 @@ About CSS
 		transition: $transition;
 	}
 	.about-img1 {
-		width: 85%;
+		max-width: 800px !important;
 	}
 	.about-img2 {
 		position: absolute;
-		left: 70px;
-		bottom: -82px;
+		max-width: 275px !important;
+		left: -25px !important;
+		top: 200px !important;
 	}
 	.shape-img {
 		position: absolute;
-		animation: moveleftbounce 3s linear infinite;
-		left: 44%;
-		top: 9%;
+		animation: moveleftbounce 2s linear infinite;
+		left: 70% !important;
+		top: -50px !important;
 	}
 	.uk-button {
 		background-color: $main-color;
@@ -917,7 +918,7 @@ Services CSS
 	position: relative;
 	z-index: 1;
 	background-color: #f9f9f9;
-	padding: 40px 50px 40px 108px;
+	padding: 40px 50px 40px 110px;
 	transition: $transition;
 	border-radius: 65px;
 
@@ -943,7 +944,7 @@ Services CSS
 	}
 	h3 {
 		font: {
-			size: 18px;
+			size: 16px;
 			weight: 700;
 		}
 		margin: 0;
