@@ -3,7 +3,6 @@ import { renderToString } from "react-dom/server";
 import * as UIkit from "uikit";
 import * as firebase from "firebase/app";
 import "firebase/functions";
-import { LaxButton } from "../common/LaxButton";
 
 interface Location {
 	left: number;
@@ -53,18 +52,33 @@ export class Contact extends Component<any, ContactState> {
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
 						<div className="item">
 							<div className="map-img">
-								<LaxButton
-									link="tel:+16619937968"
-									text="Call: (661) 993-7968"
-									driftDirection="Right"
-									style={{ borderRadius: 10 }}
-								/>
+								<button
+									style={{
+										backgroundColor: "white",
+										border: "none",
+										padding: 0
+									}}
+								>
+									<a
+										className="uk-button uk-button-default"
+										style={{ borderRadius: 10 }}
+										href="tel:+16619937968"
+									>
+										Mobile: (661) 993-7851
+									</a>
+								</button>
 								<div style={{ display: "flex" }}>
 									<div>
-										<h3>Business Hours</h3>
-										<p>Mon - Fri: 10:00 AM - 6:00 PM</p>
-										<p>Sat: 10:00 AM - 3:00 PM</p>
-										<p>Sun: Closed</p>
+										<h3>Office Hours</h3>
+										<p>
+											Mon: 10:00 AM - 6:00 PM <br />
+											Tue: 10:00 AM - 6:00 PM <br />
+											Wed: 10:00 AM - 6:00 PM <br />
+											Thur: 10:00 AM - 6:00 PM <br />
+											Fri: 10:00 AM - 6:00 PM <br />
+											Sat: 10:00 AM - 3:00 PM <br />
+											Sun: Closed <br />
+										</p>
 									</div>
 									<div className="location uk-location1">
 										<a
