@@ -19,7 +19,7 @@ export class Services extends Component {
 						<Item title="Live Scan" iconName="flaticon-ux-design" />
 						<Item title="Document Translations" iconName="flaticon-camera" />
 						<Item title="Wills and Living Trusts" iconName="flaticon-project" />
-						<Item title="Colombia Legal" iconName="flaticon-chat" />
+						<Item title="Colombian Legal Services" iconName="flaticon-chat" />
 					</div>
 				</div>
 			</section>
