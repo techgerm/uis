@@ -82,7 +82,7 @@ export class Contact extends Component<any, ContactState> {
 									</div>
 									<div className="location uk-location1">
 										<a
-											href="https://www.google.com/search?source=hp&ei=DXJtXfurL87Q-gTdko5g&q=united%20international%20services&oq=united+in&gs_l=psy-ab.3.0.35i39l2j0i131j0l7.1979.3128..3914...0.0..1.209.808.8j0j1......0....1..gws-wiz.......0i10.GULLZ1fClwg&npsic=0&rflfq=1&rlha=0&rllag=34115286,-118427551,16973&tbm=lcl&rldimm=12534831510451803968&lqi=Ch11bml0ZWQgaW50ZXJuYXRpb25hbCBzZXJ2aWNlc1ohCgAiHXVuaXRlZCBpbnRlcm5hdGlvbmFsIHNlcnZpY2Vz&ved=2ahUKEwiN-t2O9LLkAhWXu54KHettAHoQvS4wAHoECAsQJw&rldoc=1&tbs=lrf:!2m1!1e2!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:2#rlfi=hd:;si:12534831510451803968,l,Ch11bml0ZWQgaW50ZXJuYXRpb25hbCBzZXJ2aWNlc1ohCgAiHXVuaXRlZCBpbnRlcm5hdGlvbmFsIHNlcnZpY2Vz;mv:!1m2!1d34.27158578084741!2d-118.33572380478182!2m2!1d34.03520454047421!2d-118.84487144882479!4m2!1d34.15347786097811!2d-118.5902976268033!5i12"
+											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.1906544,-118.5368966,11.25z/data=!4m5!3m4!1s0x80c29700ef3918b1:0xadf4aad8abda5740!8m2!3d34.2087555!4d-118.573472"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="active"
