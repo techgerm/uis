@@ -1,24 +1,34 @@
 import * as functions from "firebase-functions";
 import * as sgMail from "@sendgrid/mail";
 
-const API_KEY = functions.config().sendgrid.key;
-const CONFIRMATION_TEMPLATE_ID = functions.config().sendgrid.template;
-sgMail.setApiKey(API_KEY);
+const sendGridConfig = functions.config().sendgrid;
+const SEND_GRID_API_KEY = sendGridConfig.key;
+const CONFIRMATION_TEMPLATE_ID = sendGridConfig.confirmation_template;
+const CLIENT_TEMPLATE_ID = sendGridConfig.client_template;
+
+sgMail.setApiKey(SEND_GRID_API_KEY);
 
 export const contact = functions.https.onCall((data, context) => {
-	// TODO: Uncomment this and include it in all promise call when the site is ready to go live
-	// const uisNotification1 = sgMail.send({
-	// 	to: "hello@unitedinternationalservices.com",
-	// 	from: data.email,
-	// 	subject: data.subject,
-	// 	text: `${data.text} ${data.phone}`
-	// });
+	const uisNotificationTemplate = {
+		from: data.email,
+		templateId: CLIENT_TEMPLATE_ID,
+		dynamicTemplateData: {
+			name: data.name,
+			message: data.text,
+			phone: data.phone,
+			subject: data.subject,
+			preheader: "[Website Inquiry]"
+		}
+	};
+
+	const uisNotification1 = sgMail.send({
+		to: "hello@unitedinternationalservices.com",
+		...uisNotificationTemplate
+	});
 
 	const uisNotification2 = sgMail.send({
 		to: "support@unitedinternationalservices.com",
-		from: data.email,
-		subject: data.subject,
-		text: `${data.text} ${data.phone}`
+		...uisNotificationTemplate
 	});
 
 	const clientNotification = sgMail.send({
@@ -32,7 +42,7 @@ export const contact = functions.https.onCall((data, context) => {
 		}
 	});
 
-	Promise.all([uisNotification2, clientNotification])
+	Promise.all([uisNotification1, uisNotification2, clientNotification])
 		.then(() => true)
 		.catch(error => {
 			throw new functions.https.HttpsError(
