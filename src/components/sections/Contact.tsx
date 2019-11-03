@@ -70,25 +70,20 @@ export class Contact extends Component<any, ContactState> {
 									<div>
 										<h3>Office Hours</h3>
 										<p>
-											Mon: 10:00 AM - 6:00 PM <br />
-											Tue: 10:00 AM - 6:00 PM <br />
-											Wed: 10:00 AM - 6:00 PM <br />
-											Thur: 10:00 AM - 6:00 PM <br />
-											Fri: 10:00 AM - 6:00 PM <br />
-											Sat: 10:00 AM - 3:00 PM <br />
+											Mon - Sat: Appointment Only <br />
 											Sun: Closed <br />
 										</p>
 									</div>
 									<div className="location uk-location1">
 										<a
-											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.1906544,-118.5368966,11.25z/data=!4m5!3m4!1s0x80c29700ef3918b1:0xadf4aad8abda5740!8m2!3d34.2087555!4d-118.573472"
+											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.2338748,-118.5517089,15z/data=!4m5!3m4!1s0x0:0xadf4aad8abda5740!8m2!3d34.2338748!4d-118.5517089"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="active"
 										>
 											<div className="location-info">
-												<h5>Los Angeles</h5>
-												<span>20207 Saticoy St</span>
+												<h5>Northridge</h5>
+												<span>19200 Nordhoff St</span>
 											</div>
 										</a>
 									</div>

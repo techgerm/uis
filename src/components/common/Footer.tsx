@@ -47,7 +47,7 @@ export class Footer extends React.Component {
 									</li> */}
 									<li>
 										<a
-											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.1906544,-118.5368966,11.25z/data=!4m5!3m4!1s0x80c29700ef3918b1:0xadf4aad8abda5740!8m2!3d34.2087555!4d-118.573472"
+											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.2338748,-118.5517089,15z/data=!4m5!3m4!1s0x0:0xadf4aad8abda5740!8m2!3d34.2338748!4d-118.5517089"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
@@ -79,13 +79,12 @@ export class Footer extends React.Component {
 						</div>
 						<div className="item">
 							<div className="single-footer-widget">
-								<h3>Los Angeles</h3>
+								<h3>Northridge</h3>
 								<div className="bar" />
 
 								<div className="location">
 									<p>
-										20207 Saticoy Street <br /> Second Floor <br /> Winnetka, CA
-										91306 <br />
+										19200 Nordhoff St <br /> Northridge, CA 91324 <br />
 									</p>
 								</div>
 							</div>
