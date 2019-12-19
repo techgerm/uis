@@ -11,7 +11,7 @@ export class Footer extends React.Component {
 		return (
 			<footer className="footer-area uk-dark uk-footer">
 				<div className="uk-container">
-					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s uk-flex-between">
+					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-flex-between">
 						<div className="item">
 							<div className="single-footer-widget">
 								<div className="logo">
@@ -77,7 +77,8 @@ export class Footer extends React.Component {
 								</ul>
 							</div>
 						</div>
-						<div className="item">
+						{/* Removing location for now */}
+						{/* <div className="item">
 							<div className="single-footer-widget">
 								<h3>Northridge</h3>
 								<div className="bar" />
@@ -88,7 +89,7 @@ export class Footer extends React.Component {
 									</p>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					<div className="copyright-area">
