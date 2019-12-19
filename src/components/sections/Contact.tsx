@@ -52,21 +52,7 @@ export class Contact extends Component<any, ContactState> {
 					<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
 						<div className="item">
 							<div className="map-img">
-								<button
-									style={{
-										backgroundColor: "white",
-										border: "none",
-										padding: 0
-									}}
-								>
-									<a
-										className="uk-button uk-button-default"
-										href="tel:+16619937968"
-									>
-										Mobile: (661) 993-7851
-									</a>
-								</button>
-								<div style={{ display: "flex" }}>
+								<div>
 									<div>
 										<h3>Office Hours</h3>
 										<p>
@@ -74,7 +60,8 @@ export class Contact extends Component<any, ContactState> {
 											Sun: Closed <br />
 										</p>
 									</div>
-									<div className="location uk-location1">
+									{/* No location at this time */}
+									{/* <div className="location uk-location1">
 										<a
 											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.2338748,-118.5517089,15z/data=!4m5!3m4!1s0x0:0xadf4aad8abda5740!8m2!3d34.2338748!4d-118.5517089"
 											target="_blank"
@@ -86,7 +73,22 @@ export class Contact extends Component<any, ContactState> {
 												<span>19200 Nordhoff St</span>
 											</div>
 										</a>
-									</div>
+									</div> */}
+									<button
+										style={{
+											backgroundColor: "white",
+											border: "none",
+											padding: 0,
+											marginTop: 25
+										}}
+									>
+										<a
+											className="uk-button uk-button-default"
+											href="tel:+16619937968"
+										>
+											Mobile: (661) 993-7851
+										</a>
+									</button>
 								</div>
 							</div>
 						</div>

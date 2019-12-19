@@ -32,8 +32,7 @@ export class Banner extends React.Component {
 										principles of our business.
 									</p>
 									<p>
-										Give us a call and we'll come to you or stop by our office
-										for a {this.boldText("FREE")} consultation!
+										Give us a call and we'll come to {this.boldText("you")}!
 									</p>
 								</div>
 							</div>
