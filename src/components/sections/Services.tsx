@@ -24,6 +24,7 @@ export class Services extends Component {
 							title="Colombian Legal Services"
 							iconName="flaticon-translation"
 						/>
+						<Item title="Taxes" iconName="flaticon-analytics" />
 					</div>
 				</div>
 			</section>
