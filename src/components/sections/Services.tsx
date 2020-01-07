@@ -15,7 +15,7 @@ export class Services extends Component {
 						<Item title="Public Notary" iconName="flaticon-quality" />
 						<Item title="Live Scan" iconName="flaticon-ux-design" />
 						<Item title="Document Translations" iconName="flaticon-chat" />
-						<Item title="Affidavits" iconName="flaticon-search-engine" />
+						<Item title="Taxes" iconName="flaticon-analytics" />
 						<Item title="Business Contracts" iconName="flaticon-link" />
 						<Item title="Apostilles" iconName="flaticon-tick" />
 						<Item title="Power of Attorney" iconName="flaticon-think" />
@@ -24,7 +24,7 @@ export class Services extends Component {
 							title="Colombian Legal Services"
 							iconName="flaticon-translation"
 						/>
-						<Item title="Taxes" iconName="flaticon-analytics" />
+						<Item title="Affidavits" iconName="flaticon-search-engine" />
 					</div>
 				</div>
 			</section>
