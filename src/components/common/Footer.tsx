@@ -47,7 +47,7 @@ export class Footer extends React.Component {
 									</li> */}
 									<li>
 										<a
-											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.2338748,-118.5517089,15z/data=!4m5!3m4!1s0x0:0xadf4aad8abda5740!8m2!3d34.2338748!4d-118.5517089"
+											href="https://www.google.com/maps/place/UNITED+INTERNATIONAL+SERVICES/@34.0204989,-118.4117325,10z/data=!4m5!3m4!1s0x0:0xadf4aad8abda5740!8m2!3d34.0204989!4d-118.4117325"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
@@ -56,7 +56,7 @@ export class Footer extends React.Component {
 									</li>
 									<li>
 										<a
-											href="https://www.yelp.com/biz/united-international-services-winnetka-2"
+											href="https://www.yelp.com/biz/united-international-services-torrance-2"
 											target="_blank"
 											rel="noopener noreferrer"
 										>
