@@ -96,7 +96,7 @@ export class Footer extends React.Component {
 						<div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-2@s">
 							<div className="item">
 								<p>
-									© United International Services LLC All Rights Reserved, 2019
+									© United International Services LLC All Rights Reserved, 2020
 								</p>
 							</div>
 
