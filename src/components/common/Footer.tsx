@@ -19,10 +19,7 @@ export class Footer extends React.Component {
 										<img src={logo} alt="logo" />
 									</a>
 								</div>
-								<p>
-									Stop by our office for a FREE consultation or give us a call
-									and we'll come to you!
-								</p>
+								<p>Give us a call and schedule a FREE consultation!</p>
 							</div>
 						</div>
 						<div className="item">
