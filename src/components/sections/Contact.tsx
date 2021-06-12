@@ -146,7 +146,7 @@ export class Contact extends Component<any, ContactState> {
 				</div>
 				<div className="item uk-margin">
 					<input
-						type="text"
+						type="tel"
 						className="uk-input"
 						placeholder="Phone"
 						value={this.state.formFields.phone}
@@ -194,11 +194,20 @@ export class Contact extends Component<any, ContactState> {
 	);
 
 	private onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		this.setSpinnerLocation();
-		this.setState({ submitting: true });
-
 		e.preventDefault();
 		const data = this.state.formFields;
+		const phone = data.phone
+			.replaceAll("(", "")
+			.replaceAll(")", "")
+			.replaceAll("-", "")
+			.replaceAll(" ", "");
+		if (phone.length !== 10 || /\D/.test(phone)) {
+			alert("Please enter a valid phone number");
+			return;
+		}
+
+		this.setSpinnerLocation();
+		this.setState({ submitting: true });
 		const mailSend = firebase.functions().httpsCallable("contact");
 		mailSend(data)
 			.then(() => {
