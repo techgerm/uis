@@ -26,7 +26,7 @@ export class App extends Component {
 			firebase.initializeApp(firebaseConfig);
 
 			// additional wait for aesthetic purposes
-			setTimeout(() => resolve(), 1000);
+			setTimeout(() => resolve(true), 1000);
 		});
 	};
 

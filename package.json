@@ -10,7 +10,8 @@
 		"lint": "tslint -p tsconfig.json",
 		"test": "react-scripts test",
 		"format": "prettier --write *.tsx \"src/**/*.tsx\" \"src/**/*.ts\"",
-		"clean": "rm -rf node_modules/",
+		"clean": "rm -rf node_modules/ && npm run clean:cache",
+		"clean:cache": "rm -rf $TMP/metro-* && rm -rf $TMPDIR/metro-*",
 		"preversion": "npm run build && CI=true npm test && npm run lint",
 		"version": "npm run format && git add --all && firebase deploy --only hosting",
 		"postversion": "git push && git push --tags"
@@ -35,7 +36,7 @@
 		"react-owl-carousel3": "^2.2.5",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "3.0.1",
-		"typescript": "3.4.5",
+		"typescript": "^4.3.2",
 		"uikit": "^3.5.9"
 	},
 	"devDependencies": {
